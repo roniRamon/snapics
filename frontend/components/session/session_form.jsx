@@ -13,30 +13,34 @@ class SessionForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
 
-    this.setWrapperRef = this.setWrapperRef.bind(this);
+    this.handleClick = this.handleClick.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
-
-  componentWillUnmount() {
-      document.removeEventListener('mousedown', this.handleClickOutside);
+  componentWillUnmount () {
+    document.addEventListener('mousedown', this.handleClick, false);
   }
+
+  componentWillMount () {
+    document.addEventListener('mousedown', this.handleClick, false);
+  }
+
+  handleClick(e) {
+    if(this.node.contains(e.target)){
+      return;
+    }
+
+    this.handleClickOutside();
+  }
+
+  handleClickOutside() {
+    this.props.history.push("/");
+  }
+
 
   componentDidMount() {
-    document.addEventListener('mousedown', this.handleClickOutside);
     this.props.clearErrors();
   }
-
-
-  setWrapperRef(node) {
-      this.wrapperRef = node;
-  }
-
-  handleClickOutside(event) {
-    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-        this.props.history.push('/');  
-      }
-    }
 
   handleInput(type) {
     return (e) => (
@@ -66,7 +70,7 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-        <div className="form-sign-container" ref={this.setWrapperRef}>
+        <div className="form-sign-container" ref={ (node) => (this.node = node) }>
           <h2>{this.props.formType}</h2>
           <form onSubmit={this.handleSubmit}>
             <ul>
