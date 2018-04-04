@@ -1,7 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-class SessionForm  extends React.Component {
+class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +12,31 @@ class SessionForm  extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+
+    this.setWrapperRef = this.setWrapperRef.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
+
+
+  componentWillUnmount() {
+      document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickOutside);
+    this.props.clearErrors();
+  }
+
+
+  setWrapperRef(node) {
+      this.wrapperRef = node;
+  }
+
+  handleClickOutside(event) {
+    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+        this.props.history.push('/');  
+      }
+    }
 
   handleInput(type) {
     return (e) => (
@@ -26,61 +51,62 @@ class SessionForm  extends React.Component {
     );
   }
 
+
   renderErrors(){
     return (
-      <p className="err-messages">
+      <div className="err-messages">
         {
           this.props.errors.map( (err, index) => (
             <p key={`err-${index}`}>{err}</p>
         ))
         }
-        </p>
+      </div>
     );
   }
 
   render() {
     return (
-      <div className="form-sign-container">
-        <h2>{this.props.formType}</h2>
-        <form onSubmit={this.handleSubmit}>
-          <ul>
-            <li>
-              <label htmlFor="username">Username: </label>
-              <input
-                type="text"
-                value={this.state.username}
-                onChange={this.handleInput('username')}
-                id="username"
-                />
-            </li>
-            <li>
-              <label htmlFor="email">Email:</label>
-              <input
-                type="text"
-                value={this.state.email}
-                onChange={this.handleInput('email')}
-                id="email"
-                />
-            </li>
-            <li>
-              <label htmlFor="password">Password:</label>
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.handleInput('password')}
-                id="password"
-                />
-            </li>
-          </ul>
-          {this.renderErrors()}
+        <div className="form-sign-container" ref={this.setWrapperRef}>
+          <h2>{this.props.formType}</h2>
+          <form onSubmit={this.handleSubmit}>
+            <ul>
+              <li>
+                <label htmlFor="username">Username: </label>
+                <input
+                  type="text"
+                  value={this.state.username}
+                  onChange={this.handleInput('username')}
+                  id="username"
+                  />
+              </li>
+              <li>
+                <label htmlFor="email">Email:</label>
+                <input
+                  type="text"
+                  value={this.state.email}
+                  onChange={this.handleInput('email')}
+                  id="email"
+                  />
+              </li>
+              <li>
+                <label htmlFor="password">Password:</label>
+                <input
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.handleInput('password')}
+                  id="password"
+                  />
+              </li>
+            </ul>
+            {this.renderErrors()}
 
-          <input type="submit" value={this.props.formType} />
-          <p>
-          Go Back to
-          <button> {this.props.navLink}</button>
-          </p>
-        </form>
-      </div>
+            <input type="submit" value={this.props.formType} />
+            <p>
+            Go Back to
+            <button> {this.props.navLink}</button>
+            </p>
+          </form>
+        </div>
     );
   }
 }
