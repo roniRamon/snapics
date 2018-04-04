@@ -18,7 +18,7 @@ class SessionForm extends React.Component {
   }
 
   componentWillUnmount () {
-    document.addEventListener('mousedown', this.handleClick, false);
+    document.removeEventListener('mousedown', this.handleClick, false);
   }
 
   componentWillMount () {
