@@ -28,10 +28,10 @@ class SessionForm  extends React.Component {
 
   renderErrors(){
     return (
-      <p>
+      <p className="err-messages">
         {
           this.props.errors.map( (err, index) => (
-            <small key={`err-${index}`}>{err}</small>
+            <p key={`err-${index}`}>{err}</p>
         ))
         }
         </p>
@@ -43,35 +43,41 @@ class SessionForm  extends React.Component {
       <div className="form-sign-container">
         <h2>{this.props.formType}</h2>
         <form onSubmit={this.handleSubmit}>
-          <label>Username:
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={this.handleInput('username')}
-              />
-          </label>
-          <br/>
-          <label>Email:
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.handleInput('email')}
-              />
-          </label>
-          <br/>
-          <label>Password:
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.handleInput('password')}
-              />
-          </label>
+          <ul>
+            <li>
+              <label htmlFor="username">Username: </label>
+              <input
+                type="text"
+                value={this.state.username}
+                onChange={this.handleInput('username')}
+                id="username"
+                />
+            </li>
+            <li>
+              <label htmlFor="email">Email:</label>
+              <input
+                type="text"
+                value={this.state.email}
+                onChange={this.handleInput('email')}
+                id="email"
+                />
+            </li>
+            <li>
+              <label htmlFor="password">Password:</label>
+              <input
+                type="password"
+                value={this.state.password}
+                onChange={this.handleInput('password')}
+                id="password"
+                />
+            </li>
+          </ul>
           {this.renderErrors()}
-          <br/>
+
           <input type="submit" value={this.props.formType} />
           <p>
-          Or go Back to
-          <button>{this.props.navLink}</button>
+          Go Back to
+          <button> {this.props.navLink}</button>
           </p>
         </form>
       </div>

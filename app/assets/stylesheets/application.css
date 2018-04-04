@@ -1,15 +1,184 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent; }
+
+ul {
+  list-style: none; }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  /*
+  Get rid of native styling. Read more here:
+  http://css-tricks.com/almanac/properties/a/appearance/
+  */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+button,
+input[type="submit"] {
+  cursor: pointer; }
+
+/* Clearfix */
+.group:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+body {
+  font-family: "Nunito Sans", sans-serif; }
+
+.lange-quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .lange-quote p {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15%; }
+  .lange-quote small {
+    font-size: 20px; }
+  .lange-quote button {
+    background-color: #f7f7f5;
+    border-radius: 3px;
+    border: solid 1px #e2e2e2;
+    margin: 0 auto;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 30px; }
+  .lange-quote button:hover {
+    color: #999; }
+
+nav {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
+  nav span {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto; }
+    nav span h1 {
+      font-size: 24px;
+      font-family: "Muli", sans-serif;
+      color: white; }
+    nav span ul {
+      display: flex;
+      flex-direction: row;
+      margin-left: auto;
+      order: 2; }
+      nav span ul li {
+        padding: 5px;
+        color: white;
+        font-size: 14px; }
+      nav span ul .signup-button, nav span ul .logout-button {
+        background-color: #f7f7f5;
+        border-radius: 3px;
+        margin-left: 20px;
+        padding-left: 17px;
+        padding-right: 17px; }
+        nav span ul .signup-button a, nav span ul .logout-button a {
+          color: black;
+          font-weight: 700; }
+        nav span ul .signup-button a:hover, nav span ul .logout-button a:hover {
+          color: #999; }
+        nav span ul .signup-button button, nav span ul .logout-button button {
+          color: black;
+          font-weight: 700; }
+        nav span ul .signup-button button:hover, nav span ul .logout-button button:hover {
+          color: #999; }
+      nav span ul .signup-button:active {
+        background: #e2e2e2;
+        box-shadow: inset 0px 0px 5px #f7f7f5; }
+
+.form-sign-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  border: solid 1px #e2e2e2;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 2px 2px 5px #e2e2e2;
+  background-color: white; }
+  .form-sign-container h2 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold; }
+  .form-sign-container form ul li {
+    display: flex;
+    justify-content: center; }
+    .form-sign-container form ul li label {
+      flex: 1;
+      margin: 10px; }
+    .form-sign-container form ul li input[type="text"], .form-sign-container form ul li input[type="password"] {
+      margin: 10px;
+      border: 1px solid #e2e2e2;
+      border-radius: 2px;
+      flex: 2; }
+    .form-sign-container form ul li input[type="text"]:focus, .form-sign-container form ul li input[type="password"]:focus {
+      box-shadow: 0 0 10px #6288a5;
+      transition-timing-function: ease-out;
+      transition: 0.25s;
+      transform: translateY(0); }
+  .form-sign-container form p {
+    text-align: center;
+    padding: 10px; }
+    .form-sign-container form p button {
+      margin-left: 5px;
+      color: #326891; }
+    .form-sign-container form p button:hover {
+      border-bottom: 1px solid #326891; }
+  .form-sign-container form input[type="submit"] {
+    background-color: #f7f7f5;
+    border-radius: 3px;
+    border: solid 1px #e2e2e2;
+    margin: 0 auto;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    font-weight: bold;
+    font-size: 14px; }
+  .form-sign-container form input[type="submit"]:hover {
+    color: #999; }
+  .form-sign-container form input[type="submit"]:active {
+    background: #e2e2e2;
+    box-shadow: inset 0px 0px 5px #f7f7f5; }
+  .form-sign-container form .err-messages {
+    font-size: 12px;
+    color: #FF4136;
+    line-height: 0.7em; }
+
+/*# sourceMappingURL=application.css.map */

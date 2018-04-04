@@ -7,21 +7,27 @@ import {
   Link,
   HashRouter
 } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
 
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
+import GreetingContainer from './greeting/greeting_container';
+import { AuthRoute } from '../util/route_util';
 
 const App = () => (
   <div>
     <nav>
-      <h1>SnaPics</h1>
-      <SessionContainer />
-
+      <span>
+        <h1>SnaPics</h1>
+        <SessionContainer />
+      </span>
     </nav>
 
-    <AuthRoute path="/signin" component={ LoginFormContainer } />
-    <AuthRoute path="/signup" component={ SignupFormContainer } />
+    <GreetingContainer />
+
+    <Switch>
+      <AuthRoute exact path="/signin" component={ LoginFormContainer } />
+      <AuthRoute exact path="/signup" component={ SignupFormContainer } />
+    </Switch>
   </div>
 );
 

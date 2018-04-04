@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const userNotSignIn = () => (
     <ul>
       <li>
-        <Link to='/signup'>Sign Up</Link>
+        <Link to='/signin'>Log In</Link>
       </li>
-      <li>
-        <Link to='/signin'>Sign In</Link>
+      <li className="signup-button">
+        <Link to='/signup'>Sign Up</Link>
       </li>
     </ul>
   );
@@ -15,8 +15,8 @@ const userNotSignIn = () => (
   const userIsSignIn = (currentUser, logout) => (
     <ul>
       <li>Hi, {currentUser.username}</li>
-      <li>
-        <button onClick={logout}>
+      <li className="logout-button">
+        <button onClick={logout} >
           Logout
         </button>
       </li>
