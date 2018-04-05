@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180404204907) do
+ActiveRecord::Schema.define(version: 20180405222806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20180404204907) do
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "email", null: false
-    t.string "img_url"
+    t.string "img_url", default: "http://res.cloudinary.com/dhyya9rw1/image/upload/v1522967154/polaroid.png"
     t.string "password_digest", null: false
     t.string "session_token", null: false
     t.datetime "created_at", null: false

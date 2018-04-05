@@ -117,7 +117,12 @@ nav {
         font-size: 14px; }
       nav span ul .upload-icon {
         color: white;
-        font-size: 30px; }
+        font-size: 33px; }
+      nav span ul .userimage {
+        border-radius: 50%; }
+        nav span ul .userimage img {
+          width: auto;
+          height: 40px; }
       nav span ul .signup-button, nav span ul .logout-button {
         background-color: #f7f7f5;
         border-radius: 3px;

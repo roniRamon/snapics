@@ -17,14 +17,17 @@ class Session extends React.Component {
     return (
       currentUser ? (
         <ul>
+          <li>Hi, {currentUser.username}</li>
+          <li className="userimage">
+            <img src={currentUser.img_url} />
+          </li>
+          <li className="upload-icon">
+            <FontAwesomeIcon icon={faCloudUploadAlt} />
+          </li>
           <li className="logout-button">
             <button onClick={logout} >
               Logout
             </button>
-          </li>
-          <li>Hi, {currentUser.username}</li>
-          <li className="upload-icon">
-            <FontAwesomeIcon icon={faCloudUploadAlt} />
           </li>
         </ul>
       ) : (
@@ -44,7 +47,9 @@ render (){
   return (
       <nav className={this.props.currentUser ? "nav-login" : "nav-not-login"}>
         <span>
-          <h1>SnaPics</h1>
+          <Link to="/">
+            <h1>SnaPics</h1>
+          </Link>
           {this.display()}
         </span>
       </nav>
