@@ -50,9 +50,7 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state).then(
-      res => this.props.history.push('/')
-    );
+    this.props.processForm(this.state);
   }
 
 

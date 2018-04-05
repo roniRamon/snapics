@@ -8,22 +8,31 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import LoginFormContainer from './session/login_form_container';
-import SignupFormContainer from './session/signup_form_container';
-import GreetingContainer from './greeting/greeting_container';
+import SplashPage from './session/splash_page';
 import PhotoIndexContainer from './photos/photos_index_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
+
 const App = () => (
   <div>
-      <Route path="/" component={SessionContainer} />
-      <AuthRoute path="/" component={GreetingContainer} />
-      <ProtectedRoute exect path="/explore" component={PhotoIndexContainer}/>
-      <AuthRoute exact path="/signin" component={ LoginFormContainer } />
-      <AuthRoute exact path="/signup" component={ SignupFormContainer } />
+    <Route path="/" component={SessionContainer} />
+    <Switch>
+      <ProtectedRoute exact path="/explore" component={PhotoIndexContainer}/>
+      <AuthRoute path="/" component={SplashPage} />
+    </Switch>
   </div>
 );
 
 export default App;
 
 //  <GreetingContainer />
+// <Route path="/" component={SessionContainer} />
+//
+//   <AuthRoute exact path="/signin" component={ LoginFormContainer } />
+//   <AuthRoute exact path="/signup" component={ SignupFormContainer } />
+
+  // <Route path="/" component={SessionContainer} />
+  // <AuthRoute path="/" component={GreetingContainer} />
+  // <ProtectedRoute exact path="/explore" component={PhotoIndexContainer}/>
+  // <AuthRoute exact path="/signin" component={ LoginFormContainer } />
+  // <AuthRoute exact path="/signup" component={ SignupFormContainer } />

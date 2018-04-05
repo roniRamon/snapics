@@ -88,7 +88,8 @@ body {
 
 nav {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed; }
   nav span {
     display: flex;
     padding: 10px;
@@ -188,5 +189,37 @@ nav {
     font-size: 12px;
     color: #FF4136;
     line-height: 0.7em; }
+
+.photos_index_div {
+  background-color: #f7f7f5; }
+  .photos_index_div h1 {
+    padding-top: 60px;
+    font-size: 22px;
+    padding-left: 12%; }
+  .photos_index_div .photos_index_container {
+    width: 80%;
+    margin: 0 auto;
+    line-height: 5;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 4px;
+    -moz-column-count: 3;
+    -moz-column-gap: 4px;
+    column-count: 3;
+    column-gap: 4px; }
+    @media screen and (max-width: 900px) {
+      .photos_index_div .photos_index_container {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2; } }
+    @media screen and (max-width: 600px) {
+      .photos_index_div .photos_index_container {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1; } }
+    .photos_index_div .photos_index_container .photos_index li {
+      padding: 5px; }
+      .photos_index_div .photos_index_container .photos_index li img {
+        width: 100%;
+        height: auto; }
 
 /*# sourceMappingURL=application.css.map */
