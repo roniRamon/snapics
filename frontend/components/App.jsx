@@ -11,26 +11,19 @@ import {
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import GreetingContainer from './greeting/greeting_container';
-import { AuthRoute } from '../util/route_util';
+import PhotoIndexContainer from './photos/photos_index_container';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-    <nav>
-      <span>
-        <h1>SnaPics</h1>
-        <SessionContainer />
-      </span>
-    </nav>
-
-    <GreetingContainer />
-
-    <Switch>
+      <Route path="/" component={SessionContainer} />
+      <AuthRoute path="/" component={GreetingContainer} />
+      <ProtectedRoute exect path="/explore" component={PhotoIndexContainer}/>
       <AuthRoute exact path="/signin" component={ LoginFormContainer } />
       <AuthRoute exact path="/signup" component={ SignupFormContainer } />
-    </Switch>
   </div>
 );
 
 export default App;
 
-// <Route exact path="/" component={ SessionContainer } />
+//  <GreetingContainer />

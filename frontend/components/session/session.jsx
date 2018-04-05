@@ -1,18 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const userNotSignIn = () => (
-    <ul>
-      <li>
-        <Link to='/signin'>Log In</Link>
-      </li>
-      <li className="signup-button">
-        <Link to='/signup'>Sign Up</Link>
-      </li>
-    </ul>
-  );
 
-  const userIsSignIn = (currentUser, logout) => (
+export default ({ currentUser, logout }) => {
+  const display = currentUser ? (
     <ul>
       <li>Hi, {currentUser.username}</li>
       <li className="logout-button">
@@ -21,10 +12,24 @@ const userNotSignIn = () => (
         </button>
       </li>
     </ul>
+  ) : (
+    <ul>
+      <li>
+        <Link to='/signin'>Log In</Link>
+      </li>
+      <li className="signup-button">
+        <Link to='/signup'>Sign Up</Link>
+      </li>
+    </ul>
+
   );
 
-const Session = ({currentUser, logout}) => (
-  currentUser ? userIsSignIn(currentUser, logout) : userNotSignIn()
-);
-
-export default Session;
+  return (
+      <nav>
+        <span>
+          <h1>SnaPics</h1>
+          {display}
+        </span>
+      </nav>
+  );
+};
