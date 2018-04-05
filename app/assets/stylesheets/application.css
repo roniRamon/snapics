@@ -86,13 +86,18 @@ body {
   .lange-quote button:hover {
     color: #999; }
 
+.nav-login {
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1; }
+
+.nav-not-login {
+  background-color: rgba(0, 0, 0, 0.5); }
+
 nav {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   position: fixed; }
   nav span {
     display: flex;
-    padding: 10px;
     align-items: center;
     width: 90%;
     margin: 0 auto; }
@@ -104,11 +109,15 @@ nav {
       display: flex;
       flex-direction: row;
       margin-left: auto;
-      order: 2; }
+      order: 2;
+      align-items: center; }
       nav span ul li {
         padding: 5px;
         color: white;
         font-size: 14px; }
+      nav span ul .upload-icon {
+        color: white;
+        font-size: 30px; }
       nav span ul .signup-button, nav span ul .logout-button {
         background-color: #f7f7f5;
         border-radius: 3px;
@@ -216,10 +225,37 @@ nav {
         -moz-column-count: 1;
         -webkit-column-count: 1;
         column-count: 1; } }
-    .photos_index_div .photos_index_container .photos_index li {
-      padding: 5px; }
-      .photos_index_div .photos_index_container .photos_index li img {
+    .photos_index_div .photos_index_container .photos_index .image-item-wrap {
+      margin: 5px;
+      position: relative; }
+      .photos_index_div .photos_index_container .photos_index .image-item-wrap li:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: transparent; }
+      .photos_index_div .photos_index_container .photos_index .image-item-wrap li:hover:before {
+        background: linear-gradient(180deg, transparent 80%, black 100%); }
+      .photos_index_div .photos_index_container .photos_index .image-item-wrap img {
         width: 100%;
         height: auto; }
+      .photos_index_div .photos_index_container .photos_index .image-item-wrap p {
+        position: absolute;
+        bottom: 12px;
+        left: 20px;
+        visibility: hidden;
+        color: white;
+        font-size: 18px;
+        font-weight: 600; }
+      .photos_index_div .photos_index_container .photos_index .image-item-wrap .photo-username {
+        position: absolute;
+        bottom: 0px;
+        left: 20px;
+        visibility: hidden;
+        color: white;
+        font-size: 14px;
+        font-weight: 200; }
+    .photos_index_div .photos_index_container .photos_index .image-item-wrap:hover p {
+      visibility: visible; }
 
 /*# sourceMappingURL=application.css.map */

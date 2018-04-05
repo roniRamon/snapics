@@ -49,14 +49,22 @@ body {
   }
 }
 
+.nav-login {
+  background-color: $blackAlpha2;
+  z-index: 1;
+}
+
+.nav-not-login {
+  background-color: $blackAlpha;
+}
+
+
 nav {
   width: 100%;
-  background-color: $blackAlpha;
   position: fixed;
 
   span {
     display: flex;
-    padding: 10px;
     align-items: center;
     width: 90%;
     margin: 0 auto;
@@ -72,11 +80,18 @@ nav {
       flex-direction: row;
       margin-left: auto;
       order: 2;
+      align-items: center;
 
       li {
         padding: 5px;
         color: white;
         font-size: 14px;
+
+      }
+
+      .upload-icon {
+        color: white;
+        font-size: 30px
 
       }
 

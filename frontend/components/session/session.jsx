@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import fontawesome from '@fortawesome/fontawesome';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faCloudUploadAlt } from '@fortawesome/fontawesome-free-solid';
 
 // export default ({ currentUser, logout }) => {
 class Session extends React.Component {
@@ -15,11 +17,14 @@ class Session extends React.Component {
     return (
       currentUser ? (
         <ul>
-          <li>Hi, {currentUser.username}</li>
           <li className="logout-button">
             <button onClick={logout} >
               Logout
             </button>
+          </li>
+          <li>Hi, {currentUser.username}</li>
+          <li className="upload-icon">
+            <FontAwesomeIcon icon={faCloudUploadAlt} />
           </li>
         </ul>
       ) : (
@@ -37,7 +42,7 @@ class Session extends React.Component {
 
 render (){
   return (
-      <nav>
+      <nav className={this.props.currentUser ? "nav-login" : "nav-not-login"}>
         <span>
           <h1>SnaPics</h1>
           {this.display()}

@@ -36,14 +36,53 @@ $break-large: 900px;
 
     .photos_index {
 
-      li{
-        padding: 5px;
+      .image-item-wrap{
+        margin: 5px;
+        position: relative;
+
+        li:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background-color: transparent;
+        }
+
+        li:hover:before {
+          background: linear-gradient(180deg, transparent 80%, black 100%);
+        }
 
         img {
           width: 100%;
           height: auto;
         }
+
+
+        p {
+          position: absolute;
+          bottom: 12px;
+          left: 20px;
+          visibility: hidden;
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        .photo-username {
+          position: absolute;
+          bottom: 0px;
+          left: 20px;
+          visibility: hidden;
+          color: white;
+          font-size: 14px;
+          font-weight: 200;
+        }
       }
+
+      .image-item-wrap:hover p {
+        visibility: visible;
+      }
+
     }
   }
 }
