@@ -6,6 +6,10 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_many :photos,
+    foreign_key: :owner_id,
+    class_name: :Photo
+
   after_initialize :set_session_token
 
   def self.find_by_credentials(username, password)

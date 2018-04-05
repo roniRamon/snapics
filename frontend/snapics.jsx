@@ -4,6 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 import {signin} from './actions/session_actions';
+import { fetchAllPhotos } from './actions/photos_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchAllPhotos = fetchAllPhotos;
   // window.dispatch(signin({username: "roni1", password: "123456"}));
   //END OF TEST
 
