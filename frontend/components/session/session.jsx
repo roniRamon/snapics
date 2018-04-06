@@ -4,7 +4,6 @@ import fontawesome from '@fortawesome/fontawesome';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faCloudUploadAlt } from '@fortawesome/fontawesome-free-solid';
 
-// export default ({ currentUser, logout }) => {
 class Session extends React.Component {
   constructor(props){
     super(props);

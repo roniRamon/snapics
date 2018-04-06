@@ -47,11 +47,20 @@ input[type="submit"] {
   display: block;
   clear: both; }
 
-body {
+body, html {
   font-family: "Nunito Sans", sans-serif;
-  background-image: url(http://res.cloudinary.com/dhyya9rw1/image/upload/v1522873327/tree-3097419_1280.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; }
+  height: 100%; }
+
+#root {
+  height: 100%; }
+  #root .div-routes {
+    height: 100%; }
+    #root .div-routes .homePage-background-image {
+      background-image: url(http://res.cloudinary.com/dhyya9rw1/image/upload/v1522873327/tree-3097419_1280.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 100%; }
 
 .lange-quote {
   display: flex;
@@ -91,7 +100,8 @@ body {
   z-index: 1; }
 
 .nav-not-login {
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px; }
 
 nav {
   width: 100%;
@@ -262,5 +272,20 @@ nav {
         font-weight: 200; }
     .photos_index_div .photos_index_container .photos_index .image-item-wrap:hover p {
       visibility: visible; }
+
+.hero-show-page {
+  height: 500px;
+  width: auto;
+  background-color: #212124;
+  padding-bottom: 60px;
+  padding-top: 100px; }
+  .hero-show-page a {
+    color: white;
+    font-size: 14px;
+    margin-left: 20px; }
+  .hero-show-page img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto; }
 
 /*# sourceMappingURL=application.css.map */

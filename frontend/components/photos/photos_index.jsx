@@ -6,16 +6,6 @@ class PhotosIndex extends React.Component {
     super(props);
   }
 
-  componentWillMount(){
-    //cancel background image set on body scss
-    document.body.style.backgroundImage = 'none';
-  }
-
-  componentWillUnmount(){
-    //cancel background image set on body scss
-    document.body.style.backgroundImage = "url(http://res.cloudinary.com/dhyya9rw1/image/upload/v1522873327/tree-3097419_1280.jpg)";
-  }
-
   componentDidMount(){
     this.props.fetchAllPhotos();
   }

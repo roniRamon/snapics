@@ -12,7 +12,7 @@ import {
 } from 'react-router-dom';
 
 export default ()=> (
-  <div>
+  <div className="homePage-background-image">
     <Route path="/" component={GreetingContainer} />
     <Route path="/signin" component={ LoginFormContainer } />
     <Route path="/signup" component={ SignupFormContainer } />
