@@ -11,8 +11,10 @@ class Session extends React.Component {
     this.display = this.display.bind(this);
   }
 
+
   display() {
     const {currentUser, logout} = this.props;
+
     return (
       currentUser ? (
         <ul>
@@ -52,8 +54,8 @@ render (){
           {this.display()}
         </span>
       </nav>
-  );
-}
+    );
+  }
 
 }
 

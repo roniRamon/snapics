@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import UploadImage from '../upload_photo/upload_photo';
+
 
 
 class PhotoShow extends React.Component {
@@ -48,7 +50,7 @@ class PhotoShow extends React.Component {
             </p>
           </section>
           <section className="photo_show_right">
-            
+              <UploadImage />
           </section>
         </main>
       </div>
