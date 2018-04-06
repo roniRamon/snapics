@@ -4,7 +4,7 @@ import photosErrorsReducer from './photos_errors_reducer';
 
 const errorsReducer = combineReducers({
   login: sessionErrorsReducer,
-  photos: photosErrorsReducer,
+   photos: photosErrorsReducer,
 });
 
 export default errorsReducer;

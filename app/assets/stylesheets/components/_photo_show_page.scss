@@ -18,3 +18,48 @@
   }
 
 }
+.main-show-page {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+
+  .photo_show_left {
+    display: flex;
+    flex: 1;
+
+    .user-icon {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+    }
+
+    p {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+
+      .username-photo-show {
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .title-photo-show {
+        font-size: 16px;
+        margin-top: 10px;
+        font-weight: 700;
+      }
+
+      .description-photo-show {
+        font-size: 13px;
+        margin-top: 10px;
+      }
+
+    }
+  }
+
+  .photo_show_right {
+    flex: 1;
+  }
+}

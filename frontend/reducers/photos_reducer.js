@@ -6,15 +6,18 @@ import { merge } from 'lodash';
 
 const photoReducer = ( state = {}, action ) => {
   Object.freeze(state);
-  let newState = merge({}, state);
+  let newState;
   switch (action.type) {
     case RECEIVE_ALL_PHOTOS:
       return merge({}, state, action.photos);
     case RECEIVE_PHOTO:
-      newState[action.photo.id] = action.photo;
+      newState = merge({}, state);
+      newState[action.photo.photo.id] = action.photo.photo;
       return newState;
     case REMOVE_PHOTO:
+       newState = merge({}, state);
       delete newState[action.photoId];
+      return newState;
     default:
       return state;
 

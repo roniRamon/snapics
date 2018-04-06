@@ -26,15 +26,3 @@ const App = () => (
 );
 
 export default App;
-
-//  <GreetingContainer />
-// <Route path="/" component={SessionContainer} />
-//
-//   <AuthRoute exact path="/signin" component={ LoginFormContainer } />
-//   <AuthRoute exact path="/signup" component={ SignupFormContainer } />
-
-  // <Route path="/" component={SessionContainer} />
-  // <AuthRoute path="/" component={GreetingContainer} />
-  // <ProtectedRoute exact path="/explore" component={PhotoIndexContainer}/>
-  // <AuthRoute exact path="/signin" component={ LoginFormContainer } />
-  // <AuthRoute exact path="/signup" component={ SignupFormContainer } />

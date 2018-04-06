@@ -288,4 +288,34 @@ nav {
     height: 100%;
     margin: 0 auto; }
 
+.main-show-page {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between; }
+  .main-show-page .photo_show_left {
+    display: flex;
+    flex: 1; }
+    .main-show-page .photo_show_left .user-icon {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px; }
+    .main-show-page .photo_show_left p {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px; }
+      .main-show-page .photo_show_left p .username-photo-show {
+        font-size: 22px;
+        font-weight: 700; }
+      .main-show-page .photo_show_left p .title-photo-show {
+        font-size: 16px;
+        margin-top: 10px;
+        font-weight: 700; }
+      .main-show-page .photo_show_left p .description-photo-show {
+        font-size: 13px;
+        margin-top: 10px; }
+  .main-show-page .photo_show_right {
+    flex: 1; }
+
 /*# sourceMappingURL=application.css.map */
