@@ -15,11 +15,23 @@
     font-size: 20px;
     text-align: center;
     font-weight: bold;
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
   }
 
   form {
 
     ul {
+      margin-top: 40px;
+
       li {
         display: flex;
         justify-content: center;
@@ -75,6 +87,7 @@
       padding-top: 3px;
       font-weight: bold;
       font-size: 14px;
+      margin-top: 10px;
     }
 
     input[type="submit"]:hover {

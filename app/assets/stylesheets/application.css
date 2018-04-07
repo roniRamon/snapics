@@ -167,23 +167,35 @@ nav {
   .form-sign-container h2, .upload-photo-form h2 {
     font-size: 20px;
     text-align: center;
-    font-weight: bold; }
-  .form-sign-container form ul li, .upload-photo-form form ul li {
-    display: flex;
-    justify-content: center; }
-    .form-sign-container form ul li label, .upload-photo-form form ul li label {
-      flex: 1;
-      margin: 10px; }
-    .form-sign-container form ul li input[type="text"], .form-sign-container form ul li input[type="password"], .upload-photo-form form ul li input[type="text"], .upload-photo-form form ul li input[type="password"] {
-      margin: 10px;
-      border: 1px solid #e2e2e2;
-      border-radius: 2px;
-      flex: 2; }
-    .form-sign-container form ul li input[type="text"]:focus, .form-sign-container form ul li textarea:focus, .form-sign-container form ul li input[type="password"]:focus, .upload-photo-form form ul li input[type="text"]:focus, .upload-photo-form form ul li textarea:focus, .upload-photo-form form ul li input[type="password"]:focus {
-      box-shadow: 0 0 10px #6288a5;
-      transition-timing-function: ease-out;
-      transition: 0.25s;
-      transform: translateY(0); }
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px; }
+  .form-sign-container form ul, .upload-photo-form form ul {
+    margin-top: 40px; }
+    .form-sign-container form ul li, .upload-photo-form form ul li {
+      display: flex;
+      justify-content: center; }
+      .form-sign-container form ul li label, .upload-photo-form form ul li label {
+        flex: 1;
+        margin: 10px; }
+      .form-sign-container form ul li input[type="text"], .form-sign-container form ul li input[type="password"], .upload-photo-form form ul li input[type="text"], .upload-photo-form form ul li input[type="password"] {
+        margin: 10px;
+        border: 1px solid #e2e2e2;
+        border-radius: 2px;
+        flex: 2; }
+      .form-sign-container form ul li input[type="text"]:focus, .form-sign-container form ul li textarea:focus, .form-sign-container form ul li input[type="password"]:focus, .upload-photo-form form ul li input[type="text"]:focus, .upload-photo-form form ul li textarea:focus, .upload-photo-form form ul li input[type="password"]:focus {
+        box-shadow: 0 0 10px #6288a5;
+        transition-timing-function: ease-out;
+        transition: 0.25s;
+        transform: translateY(0); }
   .form-sign-container form p, .upload-photo-form form p {
     text-align: center;
     padding: 10px; }
@@ -203,7 +215,8 @@ nav {
     padding-bottom: 3px;
     padding-top: 3px;
     font-weight: bold;
-    font-size: 14px; }
+    font-size: 14px;
+    margin-top: 10px; }
   .form-sign-container form input[type="submit"]:hover, .upload-photo-form form input[type="submit"]:hover {
     color: #999; }
   .form-sign-container form input[type="submit"]:active, .upload-photo-form form input[type="submit"]:active {
@@ -360,6 +373,13 @@ nav {
     opacity: 0.2;
     z-index: -1; }
 .upload-photo-form form input[type="submit"] {
-  margin-top: 20px; }
+  margin-top: 20px;
+  color: white;
+  background-color: black;
+  width: 20%;
+  text-align: center; }
+.upload-photo-form form input[type="submit"]:hover {
+  color: white;
+  background-color: #383838; }
 
 /*# sourceMappingURL=application.css.map */

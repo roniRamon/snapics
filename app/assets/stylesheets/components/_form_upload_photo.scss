@@ -60,6 +60,15 @@
 
     input[type="submit"] {
       margin-top: 20px;
+      color: white;
+      background-color: black;
+      width: 20%;
+      text-align: center;
+    }
+
+    input[type="submit"]:hover {
+      color: white;
+      background-color: #383838;
     }
   }
 }

@@ -17,11 +17,13 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div className="div-routes">
     <Route path="/" component={SessionContainer} />
-    <Switch>
+
+  <Switch>
       <ProtectedRoute exact path="/explore" component={PhotoIndexContainer}/>
       <ProtectedRoute exact path="/photo/:photoId" component={PhotoShowContainer}/>
-      <AuthRoute exact path="/" component={SplashPage} />
+      <AuthRoute path="/" component={SplashPage} />
     </Switch>
+
   </div>
 );
 
