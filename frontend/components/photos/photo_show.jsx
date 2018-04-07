@@ -29,6 +29,9 @@ class PhotoShow extends React.Component {
     if(typeof this.props.photo == "undefined"){
       return <section >Loading...</section>;
     }
+    else if ( this.props.users[this.props.photo.ownerId] === undefined ) {
+      return <section >Loading...</section>;
+    }
 
     return (
       <div>
@@ -50,7 +53,6 @@ class PhotoShow extends React.Component {
             </p>
           </section>
           <section className="photo_show_right">
-              <UploadImage />
           </section>
         </main>
       </div>

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import fontawesome from '@fortawesome/fontawesome';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faCloudUploadAlt } from '@fortawesome/fontawesome-free-solid';
+import UploadPhoto from '../upload_photo/upload_photo';
 
 class Session extends React.Component {
   constructor(props){
@@ -23,7 +21,7 @@ class Session extends React.Component {
             <img src={currentUser.img_url} />
           </li>
           <li className="upload-icon">
-            <FontAwesomeIcon icon={faCloudUploadAlt} />
+              <UploadPhoto />
           </li>
           <li className="logout-button">
             <button onClick={logout} >

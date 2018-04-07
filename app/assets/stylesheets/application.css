@@ -153,7 +153,7 @@ nav {
         background: #e2e2e2;
         box-shadow: inset 0px 0px 5px #f7f7f5; }
 
-.form-sign-container {
+.form-sign-container, .upload-photo-form {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -164,35 +164,35 @@ nav {
   padding: 15px;
   box-shadow: 2px 2px 5px #e2e2e2;
   background-color: white; }
-  .form-sign-container h2 {
+  .form-sign-container h2, .upload-photo-form h2 {
     font-size: 20px;
     text-align: center;
     font-weight: bold; }
-  .form-sign-container form ul li {
+  .form-sign-container form ul li, .upload-photo-form form ul li {
     display: flex;
     justify-content: center; }
-    .form-sign-container form ul li label {
+    .form-sign-container form ul li label, .upload-photo-form form ul li label {
       flex: 1;
       margin: 10px; }
-    .form-sign-container form ul li input[type="text"], .form-sign-container form ul li input[type="password"] {
+    .form-sign-container form ul li input[type="text"], .form-sign-container form ul li input[type="password"], .upload-photo-form form ul li input[type="text"], .upload-photo-form form ul li input[type="password"] {
       margin: 10px;
       border: 1px solid #e2e2e2;
       border-radius: 2px;
       flex: 2; }
-    .form-sign-container form ul li input[type="text"]:focus, .form-sign-container form ul li input[type="password"]:focus {
+    .form-sign-container form ul li input[type="text"]:focus, .form-sign-container form ul li textarea:focus, .form-sign-container form ul li input[type="password"]:focus, .upload-photo-form form ul li input[type="text"]:focus, .upload-photo-form form ul li textarea:focus, .upload-photo-form form ul li input[type="password"]:focus {
       box-shadow: 0 0 10px #6288a5;
       transition-timing-function: ease-out;
       transition: 0.25s;
       transform: translateY(0); }
-  .form-sign-container form p {
+  .form-sign-container form p, .upload-photo-form form p {
     text-align: center;
     padding: 10px; }
-    .form-sign-container form p button {
+    .form-sign-container form p button, .upload-photo-form form p button {
       margin-left: 5px;
       color: #326891; }
-    .form-sign-container form p button:hover {
+    .form-sign-container form p button:hover, .upload-photo-form form p button:hover {
       border-bottom: 1px solid #326891; }
-  .form-sign-container form input[type="submit"] {
+  .form-sign-container form input[type="submit"], .upload-photo-form form input[type="submit"] {
     background-color: #f7f7f5;
     border-radius: 3px;
     border: solid 1px #e2e2e2;
@@ -204,12 +204,12 @@ nav {
     padding-top: 3px;
     font-weight: bold;
     font-size: 14px; }
-  .form-sign-container form input[type="submit"]:hover {
+  .form-sign-container form input[type="submit"]:hover, .upload-photo-form form input[type="submit"]:hover {
     color: #999; }
-  .form-sign-container form input[type="submit"]:active {
+  .form-sign-container form input[type="submit"]:active, .upload-photo-form form input[type="submit"]:active {
     background: #e2e2e2;
     box-shadow: inset 0px 0px 5px #f7f7f5; }
-  .form-sign-container form .err-messages {
+  .form-sign-container form .err-messages, .upload-photo-form form .err-messages {
     font-size: 12px;
     color: #FF4136;
     line-height: 0.7em; }
@@ -317,5 +317,27 @@ nav {
         margin-top: 10px; }
   .main-show-page .photo_show_right {
     flex: 1; }
+
+.fa-cloude {
+  cursor: pointer; }
+
+.upload-photo-form button {
+  position: absolute;
+  right: 13px;
+  top: 5px; }
+.upload-photo-form form ul li textarea {
+  margin: 10px;
+  border: 1px solid #e2e2e2;
+  border-radius: 2px;
+  flex: 2; }
+.upload-photo-form form ul li img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px; }
+.upload-photo-form form ul li p {
+  text-align: center;
+  margin-top: 30%; }
+.upload-photo-form form input[type="submit"] {
+  margin-top: 20px; }
 
 /*# sourceMappingURL=application.css.map */

@@ -1,5 +1,4 @@
 import React from 'react';
-import SessionContainer from './session/session_container';
 import {
   Route,
   Redirect,
@@ -8,6 +7,7 @@ import {
   HashRouter
 } from 'react-router-dom';
 
+import SessionContainer from './session/session_container';
 import SplashPage from './session/splash_page';
 import PhotoIndexContainer from './photos/photos_index_container';
 import PhotoShowContainer from './photos/photo_show_container';
@@ -20,7 +20,7 @@ const App = () => (
     <Switch>
       <ProtectedRoute exact path="/explore" component={PhotoIndexContainer}/>
       <ProtectedRoute exact path="/photo/:photoId" component={PhotoShowContainer}/>
-      <AuthRoute path="/" component={SplashPage} />
+      <AuthRoute exact path="/" component={SplashPage} />
     </Switch>
   </div>
 );
