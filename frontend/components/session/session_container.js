@@ -5,6 +5,7 @@ import Session from './session';
 
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
+  errorsPhoto: state.errors.photos,
 });
 
 const mapDispatchToProps = (dispatch) => ({

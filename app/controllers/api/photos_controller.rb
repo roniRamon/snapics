@@ -14,7 +14,7 @@ class Api::PhotosController < ApplicationController
     if @photo.save
       render '/api/photos/show'
     else
-      render json: @photo.errors.full_messages
+      render json: @photo.errors.full_messages, status: 409
     end
   end
 

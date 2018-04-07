@@ -86,6 +86,18 @@ class UploadPhoto extends React.Component {
     );
   }
 
+  renderErrors(){
+    return (
+      <div className="err-messages">
+        {
+          this.props.errorsPhoto.map( (err, index) => (
+            <p key={`err-photo-${index}`}>{err}</p>
+        ))
+        }
+      </div>
+    );
+  }
+
   render (){
     return (
       <div>
@@ -138,6 +150,7 @@ class UploadPhoto extends React.Component {
                   }
                 </li>
               </ul>
+              {this.renderErrors()}
               <input type="submit" value="Upload"/>
           </form>
       </Modal>

@@ -11,7 +11,7 @@ class Session extends React.Component {
 
 
   display() {
-    const {currentUser, logout, createPhoto} = this.props;
+    const {currentUser, logout, createPhoto, errorsPhoto} = this.props;
 
     return (
       currentUser ? (
@@ -24,6 +24,7 @@ class Session extends React.Component {
               <UploadPhoto
                 createPhoto={createPhoto}
                 currentUser={currentUser}
+                errorsPhoto={errorsPhoto}
                 />
           </li>
           <li className="logout-button">
