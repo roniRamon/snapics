@@ -1,13 +1,15 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
+import { createPhoto } from '../../actions/photos_actions';
 import Session from './session';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   logout: () => dispatch(logout()),
+  createPhoto: (photo) => dispatch(createPhoto(photo)),
 });
 
 

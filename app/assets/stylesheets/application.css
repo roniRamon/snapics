@@ -324,19 +324,41 @@ nav {
 .upload-photo-form button {
   position: absolute;
   right: 13px;
-  top: 5px; }
-.upload-photo-form form ul li textarea {
-  margin: 10px;
-  border: 1px solid #e2e2e2;
-  border-radius: 2px;
-  flex: 2; }
-.upload-photo-form form ul li img {
-  width: 50px;
-  height: 50px;
-  margin-top: 10px; }
-.upload-photo-form form ul li p {
-  text-align: center;
-  margin-top: 30%; }
+  top: 5px;
+  color: white;
+  z-index: 2; }
+.upload-photo-form h2 {
+  background-color: black;
+  color: white;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px; }
+.upload-photo-form form ul {
+  margin-top: 40px; }
+  .upload-photo-form form ul li textarea {
+    margin: 10px;
+    border: 1px solid #e2e2e2;
+    border-radius: 2px;
+    flex: 2; }
+  .upload-photo-form form ul li .dropzone-mini-pic {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px; }
+  .upload-photo-form form ul li p {
+    text-align: center;
+    margin-top: 30%;
+    font-weight: 700; }
+  .upload-photo-form form ul li .image-dropzone {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.2;
+    z-index: -1; }
 .upload-photo-form form input[type="submit"] {
   margin-top: 20px; }
 

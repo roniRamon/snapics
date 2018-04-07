@@ -18,7 +18,7 @@ class UploadPhoto extends React.Component {
       uploadedFileCloudinaryUrl: '',
       title: '',
       description: '',
-      ownerId: this.props.ownerId,
+      ownerId: this.props.currentUser.id,
       showModal: false,
     };
 
@@ -81,9 +81,8 @@ class UploadPhoto extends React.Component {
       title: this.state.title,
       description: this.state.description,
     };
-    debugger;
     this.props.createPhoto(photo).then(
-      () => this.props.history.push('/explore')
+      () => this.handleCloseModal()
     );
   }
 
@@ -106,20 +105,20 @@ class UploadPhoto extends React.Component {
           <form onSubmit={this.handleSubmit}>
               <ul>
                 <li>
-                  <label htmlFor="title">Title: </label>
                   <input
                     type="text"
                     value={this.state.title}
+                    placeholder="Photo Title"
                     onChange={this.handleInput('title')}
                     id="title"
                     />
                 </li>
                 <li>
-                  <label htmlFor="description">Description: </label>
                   <textarea
                     value={this.state.description}
                     onChange={this.handleInput('description')}
                     id="description"
+                    placeholder="Photo Description"
                     />
                 </li>
                 <li>
@@ -129,10 +128,13 @@ class UploadPhoto extends React.Component {
                     onDrop={this.onImageDrop.bind(this)}>
                     <p>Drop an image or click to select a file to upload.</p>
                   </Dropzone>
+                  <img className="image-dropzone"
+                    src="http://res.cloudinary.com/dhyya9rw1/image/upload/v1522967154/polaroid.png" />
                 </li>
                 <li>
                   {this.state.uploadedFileCloudinaryUrl === '' ?  null :
-                    <img src={this.state.uploadedFileCloudinaryUrl} />
+                    <img className="dropzone-mini-pic"
+                      src={this.state.uploadedFileCloudinaryUrl} />
                   }
                 </li>
               </ul>
