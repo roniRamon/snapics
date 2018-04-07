@@ -44,7 +44,9 @@ class PhotoShow extends React.Component {
             <img className="user-icon" src={this.props.users[this.props.photo.ownerId].imageUrl} />
             <p>
               <span className="username-photo-show">
-                {this.props.users[this.props.photo.ownerId].username}
+                <Link to={`/profile/${this.props.photo.ownerId}`}>
+                  {this.props.users[this.props.photo.ownerId].username}
+                </Link>
               </span>
 
               <span className="title-photo-show">{this.props.photo.title}</span>

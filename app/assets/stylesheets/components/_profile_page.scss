@@ -1,0 +1,25 @@
+.profile-hero-img {
+  background-image: url(http://res.cloudinary.com/dhyya9rw1/image/upload/v1523138103/jeremy-bishop-331838-unsplash.jpg);
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+}
+
+.profile-navbar {
+  background-color: white;
+  width: 100%;
+
+  ul {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+
+    li {
+      padding: 10px;
+    }
+  }
+}
+
+.profile_index_container {
+  padding-top: 80px;
+}
