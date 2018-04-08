@@ -26,7 +26,6 @@ class Api::PhotosController < ApplicationController
     else
       render json: @photo.errors.full_messages
     end
-
   end
 
   def edit

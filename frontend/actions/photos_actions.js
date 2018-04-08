@@ -60,7 +60,7 @@ export const updatePhoto = photo => dispatch => (
 
 export const deletePhoto = photoId => dispatch => (
   ApiPhotosUtil.deletePhoto(photoId).then(
-    photo => dispatch(receivePhoto(photo)),
+    photo => dispatch(removePhoto(photo)),
     err => dispatch(receivePhotoErrors(err.responseJSON))
   )
 );

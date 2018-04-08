@@ -4,6 +4,8 @@ json.photo do
   json.ownerId @photo.owner_id
   json.title @photo.title
   json.description @photo.description
+
+  json.albums @photo.albums.pluck(:id)
 end
 
 json.user do

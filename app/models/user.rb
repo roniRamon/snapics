@@ -10,6 +10,10 @@ class User < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :Photo
 
+  has_many :albums,
+      foreign_key: :owner_id,
+      class_name: :Album
+
   after_initialize :set_session_token
 
   def self.find_by_credentials(username, password)
