@@ -25,6 +25,7 @@ class Profile extends React.Component {
   }
 
   render() {
+    debugger;
     if(typeof this.props.user == "undefined"){
       return <section >Loading...</section>;
     }
@@ -56,7 +57,10 @@ class Profile extends React.Component {
           <ul>
             <li>Photos</li>
             <li>
-              <UploadPhotoContainer />
+              { this.props.currentUser.id === this.props.user.id ?
+                <UploadPhotoContainer /> :
+                ""
+              }
             </li>
             <li>Albums</li>
           </ul>
