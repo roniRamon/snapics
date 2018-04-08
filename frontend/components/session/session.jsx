@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import UploadPhoto from '../upload_photo/upload_photo';
+import UploadPhotoContainer from '../upload_photo/upload_photo_container';
 
 class Session extends React.Component {
   constructor(props){
@@ -11,7 +11,7 @@ class Session extends React.Component {
 
 
   display() {
-    const {currentUser, logout, createPhoto, errorsPhoto, clearPhotoError} = this.props;
+    const {currentUser, logout} = this.props;
 
     return (
       currentUser ? (
@@ -21,12 +21,7 @@ class Session extends React.Component {
             <img src={currentUser.img_url} />
           </li>
           <li className="upload-icon">
-              <UploadPhoto
-                createPhoto={createPhoto}
-                currentUser={currentUser}
-                errorsPhoto={errorsPhoto}
-                clearPhotoError={clearPhotoError}
-                />
+              <UploadPhotoContainer />
           </li>
           <li className="logout-button">
             <button onClick={logout} >

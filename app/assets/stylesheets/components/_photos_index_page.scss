@@ -16,22 +16,22 @@ $break-large: 900px;
     line-height: 5;
 
      -webkit-column-count: 3;
-     -webkit-column-gap:   4px;
-     -moz-column-count:    3;
-     -moz-column-gap:      4px;
-     column-count:         3;
-     column-gap:           4px;
+     -webkit-column-gap: 4px;
+     -moz-column-count: 3;
+     -moz-column-gap: 4px;
+     column-count: 3;
+     column-gap: 4px;
 
     @media screen and (max-width: $break-large) {
-        -moz-column-count:    2;
+        -moz-column-count: 2;
         -webkit-column-count: 2;
-        column-count:         2;
+        column-count: 2;
     }
 
     @media screen and (max-width: $break-small) {
-        -moz-column-count:    1;
+        -moz-column-count: 1;
         -webkit-column-count: 1;
-        column-count:         1;
+        column-count: 1;
     }
 
     .photos_index {

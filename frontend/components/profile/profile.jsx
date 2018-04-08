@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ProfileItem from './profile_item';
+import UploadPhotoContainer from '../upload_photo/upload_photo_container';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -8,18 +9,55 @@ class Profile extends React.Component {
   }
 
   componentDidMount(){
+    this.props.fetchUser(this.props.match.params.userId);
     this.props.fetchAllPhotos();
   }
 
+  componentWillMount() {
+      this.props.fetchUser(this.props.match.params.userId);
+    this.props.fetchAllPhotos();
+  }
+
+  componentWillReceiveProps (newProps) {
+    if (this.props.match.params.userId != newProps.match.params.userId){
+      this.props.fetchUser(newProps.match.params.userId);
+    }
+  }
+
   render() {
+    if(typeof this.props.user == "undefined"){
+      return <section >Loading...</section>;
+    }
     return (
       <div>
         <section className="profile-hero-img">
-
+          <section className="user-info-profile">
+            <img src={this.props.user.img_url} />
+            <ul>
+              <li>
+                {this.props.user.username}
+              </li>
+              <li className="user-info-email" >
+                <span>
+                  {this.props.user.email}
+                </span>
+                <span>
+                  {
+                    this.props.photos.length === 1 ?
+                    this.props.photos.length + " Photo" :
+                    this.props.photos.length + " Photos"
+                  }
+                </span>
+              </li>
+            </ul>
+          </section>
         </section>
         <div className="profile-navbar">
           <ul>
             <li>Photos</li>
+            <li>
+              <UploadPhotoContainer />
+            </li>
             <li>Albums</li>
           </ul>
         </div>

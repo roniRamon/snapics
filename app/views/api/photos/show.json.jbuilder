@@ -10,4 +10,5 @@ json.user do
   json.id @photo.user.id
   json.imageUrl @photo.user.img_url
   json.username @photo.user.username
+  json.email @photo.user.email
 end

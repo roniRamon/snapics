@@ -3,11 +3,45 @@
   width: 100%;
   height: 400px;
   background-size: cover;
+  position: relative;
+
+  .user-info-profile {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    display: flex;
+
+    img {
+      width: 80px;
+      height: 80px;
+      padding-right: 40px;
+    }
+    ul {
+
+      li:first-child {
+        font-size: 30px;
+      }
+
+      li:not(:first-child) {
+        margin-top: 15px;
+      }
+      .user-info-email {
+        display: flex;
+        justify-content: space-between;
+        width: 230px;
+
+        span {
+
+        }
+      }
+    }
+  }
 }
 
 .profile-navbar {
   background-color: white;
   width: 100%;
+  border-bottom: solid 1px #e2e2e2;
 
   ul {
     display: flex;
@@ -22,4 +56,8 @@
 
 .profile_index_container {
   padding-top: 80px;
+}
+
+.profile-image-item:hover:before {
+  background: none;
 }
