@@ -11,13 +11,27 @@
     left: 50px;
     display: flex;
 
+    div {
+
+      img {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 100%;
+      }
+    }
+
     img {
       width: 80px;
       height: 80px;
-      padding-right: 40px;
+      padding: 10px;
+      border-radius: 100%;
     }
-    ul {
 
+    ul {
+      margin-left: 30px;
+      
       li:first-child {
         font-size: 30px;
       }

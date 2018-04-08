@@ -5,6 +5,6 @@ class Photo < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
 
-  belongs_to :album, through: :album_photos
+  # belongs_to :album, through: :album_photos
 
 end

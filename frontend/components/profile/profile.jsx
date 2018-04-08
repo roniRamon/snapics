@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ProfileItem from './profile_item';
 import UploadPhotoContainer from '../upload_photo/upload_photo_container';
+import UploadProfileContainer from '../upload_photo/upload_profile__container';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -25,7 +26,6 @@ class Profile extends React.Component {
   }
 
   render() {
-    debugger;
     if(typeof this.props.user == "undefined"){
       return <section >Loading...</section>;
     }
@@ -33,7 +33,10 @@ class Profile extends React.Component {
       <div>
         <section className="profile-hero-img">
           <section className="user-info-profile">
-            <img src={this.props.user.img_url} />
+            { this.props.currentUser.id === this.props.user.id ?
+              <UploadProfileContainer />  :
+                <img src={this.props.user.img_url} />
+            }
             <ul>
               <li>
                 {this.props.user.username}

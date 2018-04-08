@@ -48,3 +48,9 @@ export const fetchUser = (userId) => dispatch => (
     user => dispatch(receiveUser(user))
   )
 );
+
+export const updateUser = (user) => dispatch => (
+  ApiSessionUtil.updateUser(user).then(
+    resUser => dispatch(receiveUser(resUser))
+  )
+);

@@ -18,7 +18,9 @@ class Session extends React.Component {
         <ul>
           <li>Hi, {currentUser.username}</li>
           <li className="userimage">
-            <img src={currentUser.img_url} />
+            <Link to={`/profile/${currentUser.id}`} >
+               <img src={currentUser.img_url} />
+            </Link>
           </li>
           <li className="upload-icon">
               <UploadPhotoContainer />

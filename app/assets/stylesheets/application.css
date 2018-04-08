@@ -128,11 +128,10 @@ nav {
       nav span ul .upload-icon {
         color: white;
         font-size: 33px; }
-      nav span ul .userimage {
-        border-radius: 50%; }
-        nav span ul .userimage img {
-          width: auto;
-          height: 40px; }
+      nav span ul .userimage img {
+        border-radius: 50%;
+        width: auto;
+        height: 40px; }
       nav span ul .signup-button, nav span ul .logout-button {
         background-color: #f7f7f5;
         border-radius: 3px;
@@ -393,18 +392,27 @@ nav {
     bottom: 30px;
     left: 50px;
     display: flex; }
+    .profile-hero-img .user-info-profile div img {
+      width: 80px;
+      height: 80px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 100%; }
     .profile-hero-img .user-info-profile img {
       width: 80px;
       height: 80px;
-      padding-right: 40px; }
-    .profile-hero-img .user-info-profile ul li:first-child {
-      font-size: 30px; }
-    .profile-hero-img .user-info-profile ul li:not(:first-child) {
-      margin-top: 15px; }
-    .profile-hero-img .user-info-profile ul .user-info-email {
-      display: flex;
-      justify-content: space-between;
-      width: 230px; }
+      padding: 10px;
+      border-radius: 100%; }
+    .profile-hero-img .user-info-profile ul {
+      margin-left: 30px; }
+      .profile-hero-img .user-info-profile ul li:first-child {
+        font-size: 30px; }
+      .profile-hero-img .user-info-profile ul li:not(:first-child) {
+        margin-top: 15px; }
+      .profile-hero-img .user-info-profile ul .user-info-email {
+        display: flex;
+        justify-content: space-between;
+        width: 230px; }
 
 .profile-navbar {
   background-color: white;
