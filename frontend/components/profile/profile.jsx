@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ProfileItem from './profile_item';
 import UploadPhotoContainer from '../upload_photo/upload_photo_container';
 import UploadProfileContainer from '../upload_photo/upload_profile__container';
+import AlbumsIndexContainer from '../albums/albums_index_container';
 
 class Profile extends React.Component {
   constructor(props) {

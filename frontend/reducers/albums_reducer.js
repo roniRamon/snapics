@@ -1,4 +1,5 @@
 import { RECEIVE_ALBUM,  REMOVE_ALBUM } from '../actions/albums_actions';
+import { RECEIVE_USER } from '../actions/session_actions';
 import { merge } from 'lodash';
 
 
@@ -13,6 +14,9 @@ const albumReducer = ( state = {}, action ) => {
     case REMOVE_ALBUM:
        newState = merge({}, state);
       delete newState[action.albumId];
+      return newState;
+    case RECEIVE_USER:
+      newState = merge({}, state, action.user.albums);
       return newState;
     default:
       return state;
