@@ -431,4 +431,40 @@ nav {
 .profile-image-item:hover:before {
   background: none; }
 
+.user-albums-index {
+  width: 80%;
+  height: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 200px; }
+  .user-albums-index .user-album-cover {
+    width: 240px;
+    height: 240px;
+    border-width: 2px;
+    border-style: outset;
+    text-align: center;
+    margin: 0 auto;
+    position: relative; }
+    .user-albums-index .user-album-cover p {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      text-align: left;
+      color: white;
+      text-shadow: 2px 2px black;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+      width: 100%;
+      padding-left: 10px;
+      padding: none;
+      box-sizing: border-box; }
+      .user-albums-index .user-album-cover p .user-album-cover-title {
+        font-weight: 700; }
+      .user-albums-index .user-album-cover p .user-album-cover-img {
+        object-fit: cover; }
+
+.show-album-index-page {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 100px; }
+
 /*# sourceMappingURL=application.css.map */

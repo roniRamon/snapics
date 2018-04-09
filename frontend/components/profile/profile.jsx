@@ -16,7 +16,7 @@ class Profile extends React.Component {
   }
 
   componentWillMount() {
-      this.props.fetchUser(this.props.match.params.userId);
+    this.props.fetchUser(this.props.match.params.userId);
     this.props.fetchAllPhotos();
   }
 
@@ -82,6 +82,8 @@ class Profile extends React.Component {
               }
             </ul>
           </section>
+
+
         </div>
 
       </div>

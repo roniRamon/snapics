@@ -13,6 +13,7 @@ json.albums do
       json.id album.id
       json.title album.title
       json.ownerId album.owner_id
+      json.photoCover album.photos.first.img_url
       json.photos album.photos.pluck(:id)
     end
   end

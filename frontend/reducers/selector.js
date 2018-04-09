@@ -18,3 +18,12 @@ export const getUserAlbums = (albums, userId) => {
   });
   return userAlbums;
 };
+
+
+export const getAlbumPhoto = (album, photosState) => {
+  const albumPhotos = [];
+  album.photos.map( (photoId) => {
+    albumPhotos.push(photosState[photoId]);
+  });
+
+};
