@@ -60,10 +60,16 @@ class UploadPhotoToAlbum extends React.Component {
     }
     return (
       <div>
-        <p onClick={this.handleOpenModal} className="fa-pencil">
-          Edit Album <FontAwesomeIcon icon={faPencilAlt}
-            />
-        </p>
+        {
+          this.props.currentUser.id === this.props.album.ownerId ? (
+            <p onClick={this.handleOpenModal} className="fa-pencil">
+              Edit Album <FontAwesomeIcon icon={faPencilAlt}
+              />
+            </p>
+          ) : (
+            ''
+          )
+        }
         <Modal
           isOpen={this.state.showModal}
           className="upload-photo-form photo-album-upload"
