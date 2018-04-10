@@ -1,0 +1,36 @@
+.photo_show_right {
+  position: relative;
+  ul {
+      background-color: $light-gray;
+      padding: 25px;
+      width: 50%;
+      position: absolute;
+      right: 0;
+
+    .photo-album-item-wrap {
+      padding-bottom: 20px;
+      a {
+        li {
+          display: flex;
+          justify-content: space-between;
+
+          li:hover {
+            border: solid 1px black;
+          }
+
+          div {
+
+            img {
+              width: 100px;
+              height: 100px;
+            }
+            p {
+
+            }
+          }
+        }
+      }
+    }
+
+  } /* ul */
+} /* photo_show_right */

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import ShowPageAlbumContainer from '../albums/photo_showpage_album_container';
 import UploadImage from '../upload_photo/upload_photo';
 
 
@@ -26,7 +26,7 @@ class PhotoShow extends React.Component {
 
   render() {
 
-    if(typeof this.props.photo == "undefined"){
+    if(this.props.photo == undefined){
       return <section >Loading...</section>;
     }
     else if ( this.props.users[this.props.photo.ownerId] === undefined ) {
@@ -55,6 +55,13 @@ class PhotoShow extends React.Component {
             </p>
           </section>
           <section className="photo_show_right">
+            <ul>{
+                this.props.photo.albums.map( albumId => <ShowPageAlbumContainer
+                  albumId={ albumId }
+                  key={`albums-belongto-image-${albumId}`} />
+                )
+              }
+            </ul>
           </section>
         </main>
       </div>

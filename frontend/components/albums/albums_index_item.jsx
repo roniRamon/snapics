@@ -17,7 +17,11 @@ export default ({album}) => (
             album.photos.length + ' Photos'
           }
         </p>
-        <img src={album.photoCover} className="user-album-cover-img" />
+        {
+          album.photoCover ?
+          <img src={album.photoCover} className="user-album-cover-img" /> :
+          <img src="http://res.cloudinary.com/dhyya9rw1/image/upload/v1523300185/space-2638126_640.jpg" className="user-album-cover-img" />  
+        }
       </Link>
     </li>
   </div>

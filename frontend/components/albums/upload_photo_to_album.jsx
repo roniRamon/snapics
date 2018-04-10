@@ -80,6 +80,7 @@ class UploadPhotoToAlbum extends React.Component {
                 {
                   Object.values(this.props.photos).map( photo => {
                     if (photo.ownerId === this.props.currentUser.id){
+                      console.log(this.state.photoId == photo.id);
                     return (
                       <li key={`li-photo-album-${photo.id}`}>
                         <label key={`label-photo-album-${photo.id}`}
@@ -88,9 +89,9 @@ class UploadPhotoToAlbum extends React.Component {
                             type="radio"
                             value={photo.id}
                             name="photo"
-                            checked={this.state.photoId === photo.id}
+                            checked={this.state.photoId == photo.id}
                             onChange={this.handleImg}/>
-                          <img src={this.props.photos[photo.id].imageUrl}
+                          <img className={this.state.photoId == photo.id ? "test-class-name" : "" } src={this.props.photos[photo.id].imageUrl}
                                key={`select-photo-album-${photo.id}`}
                             />
                         </label>

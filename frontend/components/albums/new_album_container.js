@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createAlbum } from '../../actions/albums_actions';
+import { createAlbum, fetchAlbum } from '../../actions/albums_actions';
 import AddAlbum from './new_album';
 
 

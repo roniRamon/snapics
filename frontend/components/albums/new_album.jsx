@@ -12,6 +12,8 @@ class AddAlbum extends React.Component {
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
+
+
   componentWillMount() {
     Modal.setAppElement('body');
   }

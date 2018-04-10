@@ -127,19 +127,26 @@
           input[type="radio"] {
             visibility: hidden;
             position: absolute;
-            cursor:pointer;
-            border:2px solid transparent;
+            cursor: pointer;
+            border: 2px solid transparent;
           }
 
-          input[type="radio"]:checked{
-            &+img {
+          input[type="radio"]:checked + img {
+
               box-shadow: 0 0 10px $light-blue;
               border: solid 1px #6288a5;
               transition-timing-function: ease-out;
               transition: 0.25s;
               transform: translateY(0);
-            }
+
           }
+          // .test-class-name {
+          //  box-shadow: 0 0  10px $light-blue;
+          //  border: solid 1px #6288a5;
+          //  transition-timing-function: ease-out;
+          //  transition: 0.25s;
+          //  transform: translateY(0);
+          // }
 
       }
     }
