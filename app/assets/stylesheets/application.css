@@ -253,7 +253,7 @@ nav {
         -webkit-column-count: 1;
         column-count: 1; } }
     .photos_index_div .photos_index_container .photos_index .image-item-wrap {
-      margin: 5px;
+      margin: 15px;
       position: relative; }
       .photos_index_div .photos_index_container .photos_index .image-item-wrap li:before {
         content: "";
@@ -382,6 +382,8 @@ nav {
 .upload-photo-form form input[type="submit"]:hover {
   color: white;
   background-color: #383838; }
+.upload-photo-form form .err-messages {
+  font-size: 14px; }
 
 .upload-photo-close-modal {
   z-index: 5; }
