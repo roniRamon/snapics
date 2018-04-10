@@ -1,46 +1,168 @@
-.user-albums-index {
+
+.user-album-index-container {
   width: 80%;
   height: 50%;
   margin: 0 auto;
   text-align: center;
-  padding-top: 200px;
+  margin-top: 50px;
+  background-color: $lightest-gray;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
-  .user-album-cover {
-    width: 240px;
-    height: 240px;
-    border-width:2px;
-    border-style: outset;
-    text-align: center;
-    margin: 0 auto;
-    position: relative;
-
-
-    p {
-      position: absolute;
-      left: 0px;
-      bottom: 0px;
-      text-align: left;
-      color: white;
-      text-shadow: 2px 2px black;
-      background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
-      width: 100%;
-      padding-left: 10px;
-      padding: none;
-      box-sizing: border-box;
-
-      .user-album-cover-title {
-        font-weight: 700;
-      }
-
-      .user-album-cover-img {
-          object-fit: cover;
-      }
-    }
+  button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
   }
-}
+
+  .user-albums-index {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding: 30px;
+
+    .user-album-cover-div {
+      flex: 1;
+      padding-bottom: 20px;
+
+      .user-album-cover:hover {
+        box-shadow: 5px 5px 5px -2px #888;
+        }
+
+      .user-album-cover {
+        width: 240px;
+        height: 240px;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        background: white;
+
+
+
+        p {
+          position: absolute;
+          left: 0px;
+          bottom: 0px;
+          text-align: left;
+          color: white;
+          text-shadow: 2px 2px black;
+          background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+          width: 100%;
+          padding-left: 10px;
+          padding: none;
+          box-sizing: border-box;
+
+          .user-album-cover-title {
+            font-weight: 700;
+            }
+          }
+
+          .user-album-cover-img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+          }
+
+        } /*user-album-cover */
+      }
+  }  /*user-album-cover-index */
+} /*.user-album-index-container */
 
 .show-album-index-page {
   width: 80%;
   margin: 0 auto;
   padding-top: 100px;
+
+  .image-for-album-show-page {
+    background-image: url(http://res.cloudinary.com/dhyya9rw1/image/upload/v1523300185/space-2638126_640.jpg);
+    background-size: cover;
+    height: 250px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+
+    h1 {
+      margin-top: 100px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+  }
 }
+
+.show-all-photo-in-album {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.form-to-add-photo-to-album {
+  max-height: 300px;
+  overflow: scroll;
+
+  ul {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+
+    li {
+        min-width: 0;
+        margin: 5px;
+
+      label {
+
+          img {
+            height: 100px;
+            width: auto;
+            cursor:pointer;
+            border:2px solid transparent;
+
+          }
+
+          input[type="radio"] {
+            visibility: hidden;
+            position: absolute;
+            cursor:pointer;
+            border:2px solid transparent;
+          }
+
+          input[type="radio"]:checked{
+            &+img {
+              box-shadow: 0 0 10px $light-blue;
+              border: solid 1px #6288a5;
+              transition-timing-function: ease-out;
+              transition: 0.25s;
+              transform: translateY(0);
+            }
+          }
+
+      }
+    }
+
+  }
+
+}
+
+.fixed-button-botton {
+   position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 10px;
+
+
+}
+
+
+  .fa-pencil {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }

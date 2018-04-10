@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ProfileItem from '../profile/profile_item';
+import UploadPhotoToAlbumContainer from './upload_photo_to_album_container';
 
 class AlbumShow extends React.Component {
 
@@ -26,6 +27,7 @@ class AlbumShow extends React.Component {
             </Link>
 
             <section className="image-for-album-show-page">
+              <UploadPhotoToAlbumContainer album={this.props.album} />
               <h1>
                 {this.props.album.title}
               </h1>

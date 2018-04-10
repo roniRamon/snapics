@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
     resources :photos
     resources :albums
+    post 'albums/:id/photo', to: 'albums#addphoto'
   end
 
  root "static_pages#root"

@@ -22,8 +22,7 @@ const App = () => (
     <Route path="/" component={SessionContainer} />
 
   <Switch>
-      <ProtectedRoute path="/profile/:userId/albums" component={ AlbumsIndexContainer } />
-      <ProtectedRoute path="/profile/:userId" component={ProfileContainer}/>
+      <ProtectedRoute path="/profile/:userId/" component={ProfileContainer}/>
       <ProtectedRoute path="/album/:albumId" component={AlbumShowContainer}/>
       <ProtectedRoute exact path="/explore" component={PhotoIndexContainer}/>
       <ProtectedRoute exact path="/photo/:photoId" component={PhotoShowContainer}/>

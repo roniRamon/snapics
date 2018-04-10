@@ -1,5 +1,6 @@
 import React from 'react';
 import AlbumsIndexItem from './albums_index_item';
+import AddAlbumContainer from './new_album_container';
 
 class AlbumsIndex extends React.Component {
   constructor(props) {
@@ -22,16 +23,24 @@ class AlbumsIndex extends React.Component {
 
     return (
       <div>
-        <ul className="user-albums-index">
+        <section className="user-album-index-container">
           {
-            this.props.albums.map( (albumObj) => (
-              <AlbumsIndexItem
-                album={albumObj}
-                key={`album-${albumObj.id}`}
-                />
-            ))
+            this.props.currentUser.id === this.props.user.id ?
+              <AddAlbumContainer /> :
+              ""
           }
-        </ul>
+
+          <ul className="user-albums-index">
+            {
+              this.props.albums.map( (albumObj) => (
+                <AlbumsIndexItem
+                  album={albumObj}
+                  key={`album-${albumObj.id}`}
+                  />
+              ))
+            }
+          </ul>
+        </section>
       </div>
     );
   }

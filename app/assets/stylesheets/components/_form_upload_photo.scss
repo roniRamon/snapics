@@ -8,7 +8,7 @@
     right: 13px;
     top: 5px;
     color: white;
-    z-index: 2;
+    z-index: 6;
   }
 
   h2 {
@@ -22,6 +22,7 @@
     border-top-right-radius: 5px;
     padding-bottom: 5px;
     padding-top: 5px;
+    z-index: 4;
   }
 
   form {
@@ -62,8 +63,9 @@
       margin-top: 20px;
       color: white;
       background-color: black;
-      width: 20%;
+      width: 25%;
       text-align: center;
+      font-size: 15px;
     }
 
     input[type="submit"]:hover {
@@ -71,4 +73,12 @@
       background-color: #383838;
     }
   }
+}
+
+.upload-photo-close-modal {
+  z-index: 5;
+}
+
+.photo-album-upload {
+  width: 600px;
 }

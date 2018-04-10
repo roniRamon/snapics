@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import ProfileItem from './profile_item';
+import { Link, Switch, Route } from 'react-router-dom';
+import ProfilePhotoIndex from '../photos/profile_photo_index';
 import UploadPhotoContainer from '../upload_photo/upload_photo_container';
 import UploadProfileContainer from '../upload_photo/upload_profile__container';
 import AlbumsIndexContainer from '../albums/albums_index_container';
@@ -59,32 +59,29 @@ class Profile extends React.Component {
         </section>
         <div className="profile-navbar">
           <ul>
-            <li>Photos</li>
+            <li>
+              <Link to={`/profile/${this.props.user.id}/photos`}>
+              Photos
+              </Link>
+            </li>
             <li>
               { this.props.currentUser.id === this.props.user.id ?
                 <UploadPhotoContainer /> :
                 ""
               }
             </li>
-            <li>Albums</li>
+            <li>
+              <Link to={`/profile/${this.props.user.id}/albums`}>
+                Albums
+              </Link>
+            </li>
           </ul>
         </div>
-        <div className="photos_index_div">
-          <section className="photos_index_container profile_index_container">
-            <ul className="photos_index">
-              {
-                this.props.photos.map( photo => (
-                  <ProfileItem
-                    photo={photo}
-                    key={`profile-photo-${photo.id}`}
-                    />
-                ))
-              }
-            </ul>
-          </section>
-
-
-        </div>
+        <Switch >
+          <Route path="/profile/:userId/photos" render={() => <ProfilePhotoIndex photos={this.props.photos}/>} />
+          <Route path="/profile/:userId/albums" component={AlbumsIndexContainer} />
+          <Route path="/profile/:userId" render={() => <ProfilePhotoIndex photos={this.props.photos}/>} />
+        </Switch>
 
       </div>
     );

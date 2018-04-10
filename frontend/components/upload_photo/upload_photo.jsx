@@ -109,6 +109,7 @@ class UploadPhoto extends React.Component {
         <Modal
           isOpen={this.state.showModal}
           className="upload-photo-form"
+          onRequestClose={() => this.setState({showModal: false})}
         >
         <button onClick={this.handleCloseModal}
           className="upload-photo-close-modal">
@@ -121,7 +122,7 @@ class UploadPhoto extends React.Component {
                   <input
                     type="text"
                     value={this.state.title}
-                    placeholder="Photo Title"
+                    placeholder="  Photo Title"
                     onChange={this.handleInput('title')}
                     id="title"
                     />
@@ -131,7 +132,7 @@ class UploadPhoto extends React.Component {
                     value={this.state.description}
                     onChange={this.handleInput('description')}
                     id="description"
-                    placeholder="Photo Description"
+                    placeholder="  Photo Description"
                     />
                 </li>
                 <li>

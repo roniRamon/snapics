@@ -1,4 +1,5 @@
 import * as ApiAlbumsUtil from '../util/album_api_util';
+import * as ApiAlbumsPhotoUtil from '../util/album_photos_util';
 
 export const RECEIVE_ALBUM = 'RECEIVE_ALBUM';
 export const REMOVE_ALBUM = 'REMOVE_ALBUM';
@@ -50,6 +51,13 @@ export const updateAlbum = album => dispatch => (
 export const deleteAlbum = albumId => dispatch => (
   ApiAlbumsUtil.deleteAlbum(albumId).then(
     photo => dispatch(removeAlbum(photo)),
+    err => dispatch(receiveAlbumErrors(err.responseJSON))
+  )
+);
+
+export const createAlbumPhoto = (albumId, photoId) => dispatch => (
+  ApiAlbumsPhotoUtil.createAlbumPhoto(albumId, photoId).then(
+    resAlbum => dispatch(receiveAlbum(resAlbum)),
     err => dispatch(receiveAlbumErrors(err.responseJSON))
   )
 );

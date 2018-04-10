@@ -36,7 +36,19 @@ class Api::AlbumsController < ApplicationController
     render json: ["Album deleted"], status: 200
   end
 
-  def album_params
-    params.require(:album).permit(:title)
+  def addphoto
+    @album_photos = AlbumPhoto.new(album_id: params[:id],
+                                    photo_id: params[:album][:photo_id])
+
+    if @album_photos.save
+      render json: '/api/albums/show'
+    else
+      render json: @album_photos.errors.full_messages, status: 409
+    end
   end
+
+  def album_params
+    params.require(:album).permit(:title, :photo_id)
+  end
+
 end

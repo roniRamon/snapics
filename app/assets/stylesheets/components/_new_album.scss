@@ -1,0 +1,43 @@
+.new-album-form-modal {
+
+  form {
+
+    label {
+      margin-left: 25px;
+
+      input[type="text"] {
+        margin-top: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: 1px solid $light-gray;
+        border-radius: 2px;
+        width: 80%;
+        align-items: center;
+      }
+
+      input[type="text"]:focus {
+        box-shadow: 0 0 10px $light-blue;
+        transition-timing-function: ease-out;
+        transition: 0.25s;
+        transform: translateY(0);
+
+      }
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      color: white;
+      background-color: black;
+      width: 35%;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    input[type="submit"]:hover {
+      color: white;
+      background-color: #383838;
+    }
+
+
+  } /*end form */
+} /*end new-album-form */
