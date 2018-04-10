@@ -5,7 +5,8 @@ $break-large: 900px;
   background-color: $lightest-gray;
 
   h1 {
-    padding-top: 60px;
+    padding-top: 70px;
+    padding-bottom: 10px;
     font-size: 22px;
     padding-left: 12%;
   }
@@ -14,6 +15,7 @@ $break-large: 900px;
     width: 80%;
     margin: 0 auto;
     line-height: 5;
+    padding-bottom: 40px;
 
      -webkit-column-count: 3;
      -webkit-column-gap: 4px;

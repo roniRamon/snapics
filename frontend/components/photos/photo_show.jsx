@@ -19,20 +19,16 @@ class PhotoShow extends React.Component {
   }
 
   componentWillReceiveProps (newProps) {
-    if (this.props.match.params.photoId != newProps.match.params.photoId){
+    if (this.props.match.params.photoId !== newProps.match.params.photoId){
       this.props.fetchPhoto(newProps.match.params.photoId);
     }
   }
 
   render() {
 
-    if(this.props.photo == undefined){
+    if(this.props.photo == undefined || this.props.users[this.props.photo.ownerId] === undefined){
       return <section >Loading...</section>;
     }
-    else if ( this.props.users[this.props.photo.ownerId] === undefined ) {
-      return <section >Loading...</section>;
-    }
-
     return (
       <div>
         <section className="hero-show-page" >
@@ -55,10 +51,17 @@ class PhotoShow extends React.Component {
             </p>
           </section>
           <section className="photo_show_right">
+            <p>
+                This photo is in { this.props.photo.albums.length == 1 ?
+                this.props.photo.albums.length + " album" :
+                this.props.photo.albums.length + " albums" } </p>
+            <hr />
             <ul>{
                 this.props.photo.albums.map( albumId => <ShowPageAlbumContainer
                   albumId={ albumId }
+                  userId= { this.props.photo.ownerId }
                   key={`albums-belongto-image-${albumId}`} />
+
                 )
               }
             </ul>

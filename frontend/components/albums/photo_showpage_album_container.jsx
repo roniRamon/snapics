@@ -14,13 +14,12 @@ class ShowPageAlbum extends React.Component {
   }
 
     render(){
-      if(this.props.album == undefined){
+      if(this.props.album == undefined || this.props.albumId == undefined){
         return <section >Loading...</section>;
       }
-      const { albumId } =this.props;
       return (
           <div className="photo-album-item-wrap">
-            <Link to={`/album/${albumId}`}>
+            <Link to={`/album/${this.props.albumId}`}>
               <li>
                 <div>
                   {
@@ -30,7 +29,12 @@ class ShowPageAlbum extends React.Component {
                   }
                 </div>
                 <p>
-                  { this.props.album.title }
+                  <span>{ this.props.album.title }</span>
+                  <br/>
+                  { this.props.album.photos.length == 1 ?
+                    this.props.album.photos.length + " Photo" :
+                    this.props.album.photos.length + " Photos"
+                  }
                 </p>
               </li>
             </Link>
@@ -42,6 +46,7 @@ class ShowPageAlbum extends React.Component {
 const mapStateToProps = (state, ownProps) => ({
   album: state.entities.albums[ownProps.albumId],
   albumId: ownProps.albumId,
+  userId: ownProps.userId,
   photos: state.entities.photos,
 });
 

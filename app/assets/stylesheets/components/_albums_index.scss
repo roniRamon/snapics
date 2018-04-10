@@ -27,13 +27,10 @@
       flex: 1;
       padding-bottom: 20px;
 
-      .user-album-cover:hover {
-        box-shadow: 5px 5px 5px -2px #888;
-        }
 
       .user-album-cover {
-        width: 240px;
-        height: 240px;
+        width: 200px;
+        height: 200px;
         text-align: center;
         margin: 0 auto;
         position: relative;
@@ -102,17 +99,17 @@
 }
 
 .form-to-add-photo-to-album {
-  max-height: 300px;
+  max-height: 450px;
   overflow: scroll;
 
   ul {
      display: flex;
-     justify-content: center;
      flex-wrap: wrap;
 
     li {
         min-width: 0;
         margin: 5px;
+        display: inline;
 
       label {
 
@@ -140,13 +137,6 @@
               transform: translateY(0);
 
           }
-          // .test-class-name {
-          //  box-shadow: 0 0  10px $light-blue;
-          //  border: solid 1px #6288a5;
-          //  transition-timing-function: ease-out;
-          //  transition: 0.25s;
-          //  transform: translateY(0);
-          // }
 
       }
     }
@@ -156,14 +146,12 @@
 }
 
 .fixed-button-botton {
-   position: fixed;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: white;
     margin-bottom: 10px;
-
-
 }
 
 
@@ -173,3 +161,51 @@
     top: 20px;
     cursor: pointer;
   }
+
+  .add-layers-to-cover-img {
+    position: relative;
+    margin: 1px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .add-layers-to-cover-img:before {
+    content: "";
+    right: 6px;
+    left: 6px;
+    top: -6px;
+    height: 1px;
+    background: $gray;
+    position: absolute;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+  }
+
+  .add-layers-to-cover-img:hover:before {
+    right: 7px;
+    left: 7px;
+    top: -7px;
+  }
+
+  .add-layers-to-cover-img:after {
+    content: "";
+    right: 4px;
+    left: 4px;
+    top: -4px;
+    height: 1px;
+    background: $gray;
+    position: absolute;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+  }
+
+  .add-layers-to-cover-img:hover:after {
+    top: -5px;
+    right: 5px;
+    left: 5px;
+  }
+
+.photo-album-upload {
+  width: 70%;
+  height: 500px;
+}

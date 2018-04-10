@@ -6,5 +6,7 @@
     json.title photo.title
     json.description photo.description
     json.username photo.user.username
+
+    json.albums photo.albums.pluck(:id)
   end
 end
