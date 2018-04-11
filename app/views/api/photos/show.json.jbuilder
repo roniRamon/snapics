@@ -16,6 +16,8 @@ json.comments do
       json.id comment.id
       json.body comment.body
       json.authorId comment.author_id
+      json.authorImg comment.user.img_url
+      json.authorName comment.user.username
       json.photoId comment.photo_id
     end
   end

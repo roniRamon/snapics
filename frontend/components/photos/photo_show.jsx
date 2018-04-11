@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ShowPageAlbumContainer from '../albums/photo_showpage_album_container';
 import UploadImage from '../upload_photo/upload_photo';
+import CommentsIndexCotainer from '../comments/comments_index_container';
 
 
 
@@ -30,26 +31,31 @@ class PhotoShow extends React.Component {
       return <section >Loading...</section>;
     }
     return (
-      <div>
+      <div className="show-page-div-wrapper-full-page">
         <section className="hero-show-page" >
           <Link to="/explore">&#8592; Back to explore</Link>
           <img src={this.props.photo.imageUrl} />
         </section>
         <main className="main-show-page">
+
           <section className="photo_show_left">
-            <img className="user-icon" src={this.props.users[this.props.photo.ownerId].imageUrl} />
-            <p>
-              <span className="username-photo-show">
-                <Link to={`/profile/${this.props.photo.ownerId}`}>
-                  {this.props.users[this.props.photo.ownerId].username}
-                </Link>
-              </span>
+            <div>
+              <img className="user-icon" src={this.props.users[this.props.photo.ownerId].imageUrl} />
+              <p>
+                <span className="username-photo-show">
+                  <Link to={`/profile/${this.props.photo.ownerId}`}>
+                    {this.props.users[this.props.photo.ownerId].username}
+                  </Link>
+                </span>
 
-              <span className="title-photo-show">{this.props.photo.title}</span>
-              <span className="description-photo-show">{this.props.photo.description}</span>
+                <span className="title-photo-show">{this.props.photo.title}</span>
+                <span className="description-photo-show">{this.props.photo.description}</span>
 
-            </p>
+              </p>
+            </div>
+            <CommentsIndexCotainer photoId={this.props.photo.id} />
           </section>
+
           <section className="photo_show_right">
             <p>
                 This photo is in { this.props.photo.albums.length == 1 ?

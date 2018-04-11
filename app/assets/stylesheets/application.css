@@ -287,6 +287,9 @@ nav {
     .photos_index_div .photos_index_container .photos_index .image-item-wrap:hover p {
       visibility: visible; }
 
+.show-page-div-wrapper-full-page {
+  background-color: #f7f7f5; }
+
 .hero-show-page {
   height: 500px;
   width: auto;
@@ -310,6 +313,7 @@ nav {
   justify-content: space-between; }
   .main-show-page .photo_show_left {
     display: flex;
+    flex-direction: column;
     flex: 1; }
     .main-show-page .photo_show_left .user-icon {
       border-radius: 50%;
@@ -706,5 +710,17 @@ nav {
               color: #326891; }
 
 /* photo_show_right */
+.comments-wrapper ul .comment-div-container li {
+  display: flex;
+  padding: 20px; }
+  .comments-wrapper ul .comment-div-container li img {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%; }
+  .comments-wrapper ul .comment-div-container li p {
+    font-size: 14px; }
+    .comments-wrapper ul .comment-div-container li p .user-name-comment {
+      font-weight: 700;
+      color: #326891; }
 
 /*# sourceMappingURL=application.css.map */

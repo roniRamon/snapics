@@ -27,3 +27,12 @@ export const getAlbumPhoto = (album, photosState) => {
   });
 
 };
+
+
+export const getPhotoComments = (allComments, photo) => {
+  const commentArr = [];
+  photo.comments.map( commentId => {
+    commentArr.push( allComments[commentId] );
+  });
+  return commentArr;
+};
