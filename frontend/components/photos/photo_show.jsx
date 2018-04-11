@@ -39,7 +39,7 @@ class PhotoShow extends React.Component {
         <main className="main-show-page">
 
           <section className="photo_show_left">
-            <div>
+            <div className="photo_show_left-first-div">
               <img className="user-icon" src={this.props.users[this.props.photo.ownerId].imageUrl} />
               <p>
                 <span className="username-photo-show">

@@ -1,0 +1,94 @@
+.comment-div-container {
+
+  .comment-form-li:hover {
+    background: none;
+  }
+
+  .comment-form-li {
+    display: flex;
+    padding: 20px;
+    background: none;
+
+    span {
+      img {
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  form {
+
+    .comment-form-textarea-container:before {
+      content: ' ';
+      position: absolute;
+      width: 21px;
+      height: 21px;
+      left: -13px;
+      top: 20px;
+      border: 1px solid;
+      border-color: #999 transparent transparent #999;
+      transform: rotate(-44deg);
+    }
+
+    .comment-form-textarea-container::after {
+      content: ' ';
+      position: absolute;
+      width: 0px;
+      height: 7px;
+      left: -3px;
+      top: 9px;
+      border: 22px solid;
+      border-color: white transparent transparent white;
+      transform: rotate(-44deg);
+    }
+
+    .comment-form-textarea-container:hover,
+    .comment-form-textarea-container:hover:before
+     {
+      border: 2px solid $blue;
+    }
+
+    .comment-form-textarea-container {
+      position: relative;
+      margin-left: 20px;
+      width: 300px;
+      height: 100px;
+      background-color: white;
+      border: 1px solid $gray;
+      border-radius: 5px;
+      font-size: 14px;
+
+
+      textarea {
+        width: 2800px;
+        height: 80px;
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+    }
+
+
+    input[type="submit"] {
+      margin-top: 40px;
+      margin-top: 25px;
+      margin-left: 233px;
+      color: white;
+      background-color: #326891;
+      text-align: center;
+      font-size: 15px;
+      border-radius: 2px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    input[type="submit"]:hover {
+      color: white;
+      background-color: #265e8b;
+    }
+  }
+
+}

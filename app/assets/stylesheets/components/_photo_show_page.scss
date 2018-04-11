@@ -34,38 +34,44 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    margin-right: 50px;
 
-    .user-icon {
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-    }
-
-    p {
+    .photo_show_left-first-div {
       display: flex;
-      flex-direction: column;
-      margin-left: 20px;
 
-      .username-photo-show {
-        font-size: 22px;
-        font-weight: 700;
+      .user-icon {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
       }
 
-      .title-photo-show {
-        font-size: 16px;
-        margin-top: 10px;
-        font-weight: 700;
-      }
+      p {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
 
-      .description-photo-show {
-        font-size: 13px;
-        margin-top: 10px;
-      }
+        .username-photo-show {
+          font-size: 22px;
+          font-weight: 700;
+        }
 
+        .title-photo-show {
+          font-size: 16px;
+          margin-top: 10px;
+          font-weight: 700;
+        }
+
+        .description-photo-show {
+          font-size: 13px;
+          margin-top: 10px;
+        }
+
+      }
     }
-  }
+  } /*end of photo-show-left */
 
   .photo_show_right {
     flex: 1;
+    margin-left: 50px;
   }
 }

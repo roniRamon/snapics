@@ -1,25 +1,24 @@
 import { connect } from 'react-redux';
+import FormComment from './form_comment';
 import { fetchPhoto } from '../../actions/photos_actions';
-import { deleteComment } from '../../actions/comments_actions';
-import CommentsIndex from './comments_index';
-import { getPhotoComments } from '../../reducers/selector';
+import { createComment } from '../../actions/comments_actions';
 
 const mapStateToProps = (state, ownProps) => {
 const photo = state.entities.photos[ownProps.photoId];
 return  ({
     photo: photo,
-    comments: getPhotoComments(state.entities.comments, photo),
     currentUser: state.session.currentUser,
+    addedComment: ownProps.addedComment,
   });
 };
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchPhoto: photoId => dispatch(fetchPhoto(photoId)),
-  deleteComment: commentId => dispatch(deleteComment(commentId)),
+  createComment: comment => dispatch(createComment(comment)),
 });
 
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(CommentsIndex);
+)(FormComment);

@@ -25,7 +25,6 @@
     .photo-album-item-wrap {
       padding-bottom: 20px;
 
-      a {
 
         li:hover {
             transition: background-color 0.5s ease;
@@ -89,16 +88,19 @@
               font-size: 12px;
               color: $gray;
 
-              span {
+              .link-to-user-profile-from-photo-show-page {
                 font-size: 14px;
                 font-weight: 700;
                 color: $blue;
+                transition: text-decoration 0.8s ease;
+              }
+
+              .link-to-user-profile-from-photo-show-page:hover {
+                text-decoration: underline;
               }
             }
 
           } /* li */
-
-        } /* a */
 
       } /*photo-album-item-wrap */
 

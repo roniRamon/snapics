@@ -1,11 +1,37 @@
 
 
 .comments-wrapper {
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $gray2;
+    margin: 1em 0;
+    padding: 0;
+  }
+
   ul {
+
     .comment-div-container {
-      li {
+      position: relative;
+
+      .comment-li:hover .delete-comment-button{
+        visibility: visible;
+      }
+
+      .comment-li .delete-comment-button{
+        visibility: hidden;
+      }
+
+      .comment-li:hover {
+        background-color: white;
+        position: relative;
+      }
+
+      .comment-li {
         display: flex;
         padding: 20px;
+        transition: background-color 0.5s ease;
 
         img {
           width: 33px;
@@ -14,14 +40,32 @@
         }
         p {
           font-size: 14px;
+          padding-left: 20px;
 
           .user-name-comment {
             font-weight: 700;
             color: $blue;
+            transition: text-decoration 0.8s ease;
+          }
+
+          .user-name-comment:hover {
+            text-decoration: underline
           }
         }
 
-      }
-    }
-  }
-}
+        .delete-comment-button {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          color: $light-gray;
+          font-weight: 700;
+        }
+
+        .delete-comment-button:hover {
+          color: $gray;
+        }
+      } /* end li */
+
+    } /* end  comment-div-container*/
+  } /* end ul */
+} /* comments-wrapper */

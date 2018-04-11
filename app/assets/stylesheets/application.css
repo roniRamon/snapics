@@ -310,31 +310,36 @@ nav {
   margin: 0 auto;
   margin-top: 40px;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  /*end of photo-show-left */ }
   .main-show-page .photo_show_left {
     display: flex;
     flex-direction: column;
-    flex: 1; }
-    .main-show-page .photo_show_left .user-icon {
-      border-radius: 50%;
-      width: 60px;
-      height: 60px; }
-    .main-show-page .photo_show_left p {
-      display: flex;
-      flex-direction: column;
-      margin-left: 20px; }
-      .main-show-page .photo_show_left p .username-photo-show {
-        font-size: 22px;
-        font-weight: 700; }
-      .main-show-page .photo_show_left p .title-photo-show {
-        font-size: 16px;
-        margin-top: 10px;
-        font-weight: 700; }
-      .main-show-page .photo_show_left p .description-photo-show {
-        font-size: 13px;
-        margin-top: 10px; }
+    flex: 1;
+    margin-right: 50px; }
+    .main-show-page .photo_show_left .photo_show_left-first-div {
+      display: flex; }
+      .main-show-page .photo_show_left .photo_show_left-first-div .user-icon {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px; }
+      .main-show-page .photo_show_left .photo_show_left-first-div p {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px; }
+        .main-show-page .photo_show_left .photo_show_left-first-div p .username-photo-show {
+          font-size: 22px;
+          font-weight: 700; }
+        .main-show-page .photo_show_left .photo_show_left-first-div p .title-photo-show {
+          font-size: 16px;
+          margin-top: 10px;
+          font-weight: 700; }
+        .main-show-page .photo_show_left .photo_show_left-first-div p .description-photo-show {
+          font-size: 13px;
+          margin-top: 10px; }
   .main-show-page .photo_show_right {
-    flex: 1; }
+    flex: 1;
+    margin-left: 50px; }
 
 .fa-cloude {
   cursor: pointer; }
@@ -658,69 +663,169 @@ nav {
       display: block; }
     .photo_show_right ul .photo-album-item-wrap {
       padding-bottom: 20px;
-      /* a */ }
-      .photo_show_right ul .photo-album-item-wrap a {
-        /* li */ }
-        .photo_show_right ul .photo-album-item-wrap a li:hover {
-          transition: background-color 0.5s ease;
-          background-color: #e2e2e2; }
-        .photo_show_right ul .photo-album-item-wrap a li {
-          display: flex;
-          justify-content: space-between;
-          padding: 5px; }
-          .photo_show_right ul .photo-album-item-wrap a li div {
-            position: relative;
-            margin: 1px;
-            margin-top: 15px; }
-            .photo_show_right ul .photo-album-item-wrap a li div img {
-              width: 50px;
-              height: 50px; }
-          .photo_show_right ul .photo-album-item-wrap a li div:before {
-            content: "";
-            right: 4px;
-            left: 4px;
-            top: -4px;
-            height: 1px;
-            background: #999;
-            position: absolute;
-            -webkit-transition: all .15s ease-in-out;
-            transition: all .15s ease-in-out; }
-          .photo_show_right ul .photo-album-item-wrap a li div:hover:before {
-            top: -5px; }
-          .photo_show_right ul .photo-album-item-wrap a li div:after {
-            content: "";
-            right: 2px;
-            left: 2px;
-            top: -2px;
-            height: 1px;
-            background: #999;
-            position: absolute;
-            -webkit-transition: all .15s ease-in-out;
-            transition: all .15s ease-in-out; }
-          .photo_show_right ul .photo-album-item-wrap a li div:hover:after {
-            top: -3px; }
-          .photo_show_right ul .photo-album-item-wrap a li p {
-            margin-top: 12px;
-            width: 70%;
-            font-size: 12px;
-            color: #999; }
-            .photo_show_right ul .photo-album-item-wrap a li p span {
-              font-size: 14px;
-              font-weight: 700;
-              color: #326891; }
+      /* li */ }
+      .photo_show_right ul .photo-album-item-wrap li:hover {
+        transition: background-color 0.5s ease;
+        background-color: #e2e2e2; }
+      .photo_show_right ul .photo-album-item-wrap li {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px; }
+        .photo_show_right ul .photo-album-item-wrap li div {
+          position: relative;
+          margin: 1px;
+          margin-top: 15px; }
+          .photo_show_right ul .photo-album-item-wrap li div img {
+            width: 50px;
+            height: 50px; }
+        .photo_show_right ul .photo-album-item-wrap li div:before {
+          content: "";
+          right: 4px;
+          left: 4px;
+          top: -4px;
+          height: 1px;
+          background: #999;
+          position: absolute;
+          -webkit-transition: all .15s ease-in-out;
+          transition: all .15s ease-in-out; }
+        .photo_show_right ul .photo-album-item-wrap li div:hover:before {
+          top: -5px; }
+        .photo_show_right ul .photo-album-item-wrap li div:after {
+          content: "";
+          right: 2px;
+          left: 2px;
+          top: -2px;
+          height: 1px;
+          background: #999;
+          position: absolute;
+          -webkit-transition: all .15s ease-in-out;
+          transition: all .15s ease-in-out; }
+        .photo_show_right ul .photo-album-item-wrap li div:hover:after {
+          top: -3px; }
+        .photo_show_right ul .photo-album-item-wrap li p {
+          margin-top: 12px;
+          width: 70%;
+          font-size: 12px;
+          color: #999; }
+          .photo_show_right ul .photo-album-item-wrap li p .link-to-user-profile-from-photo-show-page {
+            font-size: 14px;
+            font-weight: 700;
+            color: #326891;
+            transition: text-decoration 0.8s ease; }
+          .photo_show_right ul .photo-album-item-wrap li p .link-to-user-profile-from-photo-show-page:hover {
+            text-decoration: underline; }
 
 /* photo_show_right */
-.comments-wrapper ul .comment-div-container li {
+.comments-wrapper {
+  /* end ul */ }
+  .comments-wrapper hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; }
+  .comments-wrapper ul {
+    /* end  comment-div-container*/ }
+    .comments-wrapper ul .comment-div-container {
+      position: relative;
+      /* end li */ }
+      .comments-wrapper ul .comment-div-container .comment-li:hover .delete-comment-button {
+        visibility: visible; }
+      .comments-wrapper ul .comment-div-container .comment-li .delete-comment-button {
+        visibility: hidden; }
+      .comments-wrapper ul .comment-div-container .comment-li:hover {
+        background-color: white;
+        position: relative; }
+      .comments-wrapper ul .comment-div-container .comment-li {
+        display: flex;
+        padding: 20px;
+        transition: background-color 0.5s ease; }
+        .comments-wrapper ul .comment-div-container .comment-li img {
+          width: 33px;
+          height: 33px;
+          border-radius: 50%; }
+        .comments-wrapper ul .comment-div-container .comment-li p {
+          font-size: 14px;
+          padding-left: 20px; }
+          .comments-wrapper ul .comment-div-container .comment-li p .user-name-comment {
+            font-weight: 700;
+            color: #326891;
+            transition: text-decoration 0.8s ease; }
+          .comments-wrapper ul .comment-div-container .comment-li p .user-name-comment:hover {
+            text-decoration: underline; }
+        .comments-wrapper ul .comment-div-container .comment-li .delete-comment-button {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          color: #e2e2e2;
+          font-weight: 700; }
+        .comments-wrapper ul .comment-div-container .comment-li .delete-comment-button:hover {
+          color: #999; }
+
+/* comments-wrapper */
+.comment-div-container .comment-form-li:hover {
+  background: none; }
+.comment-div-container .comment-form-li {
   display: flex;
-  padding: 20px; }
-  .comments-wrapper ul .comment-div-container li img {
+  padding: 20px;
+  background: none; }
+  .comment-div-container .comment-form-li span img {
     width: 33px;
     height: 33px;
     border-radius: 50%; }
-  .comments-wrapper ul .comment-div-container li p {
-    font-size: 14px; }
-    .comments-wrapper ul .comment-div-container li p .user-name-comment {
-      font-weight: 700;
-      color: #326891; }
+.comment-div-container form .comment-form-textarea-container:before {
+  content: ' ';
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  left: -13px;
+  top: 20px;
+  border: 1px solid;
+  border-color: #999 transparent transparent #999;
+  transform: rotate(-44deg); }
+.comment-div-container form .comment-form-textarea-container::after {
+  content: ' ';
+  position: absolute;
+  width: 0px;
+  height: 7px;
+  left: -3px;
+  top: 9px;
+  border: 22px solid;
+  border-color: white transparent transparent white;
+  transform: rotate(-44deg); }
+.comment-div-container form .comment-form-textarea-container:hover,
+.comment-div-container form .comment-form-textarea-container:hover:before {
+  border: 2px solid #326891; }
+.comment-div-container form .comment-form-textarea-container {
+  position: relative;
+  margin-left: 20px;
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 14px; }
+  .comment-div-container form .comment-form-textarea-container textarea {
+    width: 2800px;
+    height: 80px;
+    margin-left: 20px;
+    margin-top: 20px; }
+.comment-div-container form input[type="submit"] {
+  margin-top: 40px;
+  margin-top: 25px;
+  margin-left: 233px;
+  color: white;
+  background-color: #326891;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 2px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px; }
+.comment-div-container form input[type="submit"]:hover {
+  color: white;
+  background-color: #265e8b; }
 
 /*# sourceMappingURL=application.css.map */

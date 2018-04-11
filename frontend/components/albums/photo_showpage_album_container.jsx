@@ -19,17 +19,21 @@ class ShowPageAlbum extends React.Component {
       }
       return (
           <div className="photo-album-item-wrap">
-            <Link to={`/album/${this.props.albumId}`}>
               <li>
-                <div>
-                  {
-                    this.props.album.photos.length > 0 ?
-                      <img src={ this.props.photos[this.props.album.photos[0]].imageUrl } /> :
-                      <img src="http://res.cloudinary.com/dhyya9rw1/image/upload/v1523300185/space-2638126_640.jpg" />
-                  }
-                </div>
+                <Link to={`/album/${this.props.albumId}`}>
+                  <div>
+                    {
+                      this.props.album.photos.length > 0 ?
+                        <img src={ this.props.photos[this.props.album.photos[0]].imageUrl } /> :
+                        <img src="http://res.cloudinary.com/dhyya9rw1/image/upload/v1523300185/space-2638126_640.jpg" />
+                    }
+                  </div>
+                </Link>
                 <p>
-                  <span>{ this.props.album.title }</span>
+                  <Link to={`/album/${this.props.albumId}`}
+                    className="link-to-user-profile-from-photo-show-page">
+                    { this.props.album.title }
+                  </Link>
                   <br/>
                   { this.props.album.photos.length == 1 ?
                     this.props.album.photos.length + " Photo" :
@@ -37,7 +41,6 @@ class ShowPageAlbum extends React.Component {
                   }
                 </p>
               </li>
-            </Link>
           </div>
         );
     }
