@@ -1,16 +1,5 @@
 Rails.application.routes.draw do
 
-  namespace :api do
-    get 'comments/create'
-  end
-
-  namespace :api do
-    get 'comments/update'
-  end
-
-  namespace :api do
-    get 'comments/destroy'
-  end
 
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create, :show, :update]
@@ -18,7 +7,7 @@ Rails.application.routes.draw do
     resources :photos
     resources :albums
     resources :comments
-    get 'photos/:id/comment', to: 'comments#getcomments' 
+    get 'photos/:id/comment', to: 'comments#getcomments'
     post 'albums/:id/photo', to: 'albums#addphoto'
   end
 

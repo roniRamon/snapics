@@ -1,5 +1,9 @@
 class Api::CommentsController < ApplicationController
 
+  def show
+    @comment = Comment.find(params[:id])
+  end
+
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
@@ -25,10 +29,10 @@ class Api::CommentsController < ApplicationController
     render json: ['Comment Deleted'], status: 200
   end
 
-  def getcomments
-    @comments = Photo.find(params[:id]).comments
-    render json: '/api/comments/getcomments'
-  end
+  # def getcomments
+  #   @comments = Photo.find(params[:id]).comments
+  #   render '/api/comments/getcomments'
+  # end
 
   def comment_params
     params.require(:comment).permit(:body, :author_id, :photo_id)

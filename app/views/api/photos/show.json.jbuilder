@@ -6,7 +6,22 @@ json.photo do
   json.description @photo.description
 
   json.albums @photo.albums.pluck(:id)
+  json.comments @photo.comments.pluck(:id)
 end
+
+json.comments do
+
+  @photo.comments.each do |comment|
+    json.set! comment.id do
+      json.id comment.id
+      json.body comment.body
+      json.authorId comment.author_id
+      json.photoId comment.photo_id
+    end
+  end
+
+end
+
 
 json.user do
   json.id @photo.user.id
