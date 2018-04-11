@@ -14,6 +14,10 @@ class User < ApplicationRecord
       foreign_key: :owner_id,
       class_name: :Album
 
+  has_many :comments,
+    foreign_key: :author_id,
+    class_name: :Comment
+
   after_initialize :set_session_token
 
   def self.find_by_credentials(username, password)

@@ -41,7 +41,8 @@ class Api::AlbumsController < ApplicationController
                                     photo_id: params[:album][:photo_id])
 
     if @album_photos.save
-      render json: '/api/albums/show'
+      @album = @album_photos.album
+      render 'api/albums/show'
     else
       render json: @album_photos.errors.full_messages, status: 409
     end

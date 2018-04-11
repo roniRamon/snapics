@@ -30,19 +30,24 @@
     }
 
     ul {
-      margin-left: 30px;
-      
+      margin-left: 15px;
+      color: white;
+
       li:first-child {
-        font-size: 30px;
+        font-size: 33px;
+        letter-spacing: 2px;
       }
 
       li:not(:first-child) {
         margin-top: 15px;
+
+        span:not(:first-child) {
+          padding-left: 20px;
+        }
       }
       .user-info-email {
         display: flex;
-        justify-content: space-between;
-        width: 230px;
+
 
         span {
 

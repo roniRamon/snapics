@@ -5,6 +5,10 @@ class Photo < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
 
+  has_many :comments,
+    foreign_key: :photo_id,
+    class_name: :Comment
+
   has_many :album_photos, dependent: :destroy
   has_many :albums, through: :album_photos
 

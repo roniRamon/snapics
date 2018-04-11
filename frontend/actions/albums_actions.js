@@ -57,7 +57,9 @@ export const deleteAlbum = albumId => dispatch => (
 
 export const createAlbumPhoto = (albumId, photoId) => dispatch => (
   ApiAlbumsPhotoUtil.createAlbumPhoto(albumId, photoId).then(
-    resAlbum => dispatch(receiveAlbum(resAlbum)),
-    err => dispatch(receiveAlbumErrors(err.responseJSON))
+    resAlbum => {
+      debugger
+      dispatch(receiveAlbum(resAlbum));
+    }
   )
 );

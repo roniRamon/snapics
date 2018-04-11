@@ -416,15 +416,17 @@ nav {
       padding: 10px;
       border-radius: 100%; }
     .profile-hero-img .user-info-profile ul {
-      margin-left: 30px; }
+      margin-left: 15px;
+      color: white; }
       .profile-hero-img .user-info-profile ul li:first-child {
-        font-size: 30px; }
+        font-size: 33px;
+        letter-spacing: 2px; }
       .profile-hero-img .user-info-profile ul li:not(:first-child) {
         margin-top: 15px; }
+        .profile-hero-img .user-info-profile ul li:not(:first-child) span:not(:first-child) {
+          padding-left: 20px; }
       .profile-hero-img .user-info-profile ul .user-info-email {
-        display: flex;
-        justify-content: space-between;
-        width: 230px; }
+        display: flex; }
 
 .profile-navbar {
   background-color: white;

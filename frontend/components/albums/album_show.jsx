@@ -4,21 +4,29 @@ import ProfileItem from '../profile/profile_item';
 import UploadPhotoToAlbumContainer from './upload_photo_to_album_container';
 
 class AlbumShow extends React.Component {
+  constructor(props) {
+    super(props);
 
-  componentDidMount() {
-      this.props.fetchAllPhotos();
-      this.props.fetchAlbum(this.props.match.params.albumId);
+    this.state = { firstLoad: true };
   }
 
-  componentWillMount() {
-    this.props.fetchAllPhotos();
-    this.props.fetchAlbum(this.props.match.params.albumId);
+  componentDidMount() {
+    this.props.fetchAlbum(this.props.match.params.albumId)
+      .then(() => this.props.fetchAllPhotos())
+      .then(() => {
+        this.setState({firstLoad: false});
+      });
+  }
+
+  componentWillReceiveProps (newProps) {
+    if (this.props.match.params.albumId != newProps.match.params.albumId){
+      this.props.fetchAlbum(newProps.match.params.albumId);
+    }
   }
 
   render() {
-    if(this.props.album == undefined){
-      return <section >Loading...</section>;
-    }
+    if (this.state.firstLoad) return <section>Loading...</section>;
+    
     return (
         <div>
           <section className="show-album-index-page">
@@ -44,6 +52,7 @@ class AlbumShow extends React.Component {
                 <ul className="photos_index">
                   {
                     this.props.album.photos.map( photoId => (
+
                       <ProfileItem
                         photo={this.props.photos[photoId]}
                         key={`profile-photo-${photoId}`}

@@ -27,7 +27,7 @@ class Profile extends React.Component {
   }
 
   render() {
-    if(typeof this.props.user == "undefined"){
+    if(this.props.user == undefined){
       return <section >Loading...</section>;
     }
     return (

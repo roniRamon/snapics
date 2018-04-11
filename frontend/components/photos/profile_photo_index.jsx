@@ -2,7 +2,6 @@ import ProfileItem from '../profile/profile_item';
 import React from 'react';
 
 export default (props) => {
-  debugger
   return(
   <div className="photos_index_div">
     <section className="photos_index_container profile_index_container">

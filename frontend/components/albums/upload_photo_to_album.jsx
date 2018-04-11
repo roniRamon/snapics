@@ -42,7 +42,7 @@ class UploadPhotoToAlbum extends React.Component {
   }
 
   handleSubmit(e) {
-    event.preventDefault();
+    e.preventDefault();
     this.props.createAlbumPhoto(this.state.albumId, this.state.photoId).then(
       res => this.setState({ showModal: false })
     );
