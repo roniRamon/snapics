@@ -26,13 +26,9 @@ class Api::CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    render json: ['Comment Deleted'], status: 200
+    render '/api/comments/show'
   end
 
-  # def getcomments
-  #   @comments = Photo.find(params[:id]).comments
-  #   render '/api/comments/getcomments'
-  # end
 
   def comment_params
     params.require(:comment).permit(:body, :author_id, :photo_id)

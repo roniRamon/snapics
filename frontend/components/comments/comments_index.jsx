@@ -11,9 +11,6 @@ class CommentsIndex extends React.Component {
     this.props.fetchPhoto(this.props.photoId);
   }
 
-  addComments(newComment) {
-    this.setState({comments: [...this.state.comments, newComment]});
-}
 
   render() {
     return (
@@ -26,13 +23,13 @@ class CommentsIndex extends React.Component {
                   comment={comment}
                   deleteComment={this.props.deleteComment}
                   currentUser={this.props.currentUser}
+                  fetchPhoto={this.props.fetchPhoto}
                   key={`comment-${comment.id}`}
                   />
             ))
           }
           <FormCommentContainer
             photoId={this.props.photoId}
-            addComment={ this.addComments }
             />
         </ul>
       </div>

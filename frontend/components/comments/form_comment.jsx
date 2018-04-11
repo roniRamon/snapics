@@ -22,13 +22,14 @@ class FormComment extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const photo = this.props.photo.id;
 
     this.props.createComment({
       body: this.state.body,
       author_id: this.props.currentUser.id,
       photo_id: this.props.photo.id
-    }).then(
-      (res) => this.props.addComment(res)
+    }).then( (res) => this.props.fetchPhoto(photo))
+      .then( (res) => this.setState({body: ""})
     );
   }
 

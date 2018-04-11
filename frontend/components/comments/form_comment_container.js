@@ -8,7 +8,6 @@ const photo = state.entities.photos[ownProps.photoId];
 return  ({
     photo: photo,
     currentUser: state.session.currentUser,
-    addedComment: ownProps.addedComment,
   });
 };
 
