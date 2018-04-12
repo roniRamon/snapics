@@ -7,6 +7,7 @@ import {
   HashRouter
 } from 'react-router-dom';
 
+import Footer from './session/footer';
 import SessionContainer from './session/session_container';
 import SplashPage from './session/splash_page';
 import PhotoIndexContainer from './photos/photos_index_container';
@@ -21,13 +22,15 @@ const App = () => (
   <div className="div-routes">
     <Route path="/" component={SessionContainer} />
 
-  <Switch>
+    <Switch>
       <ProtectedRoute path="/profile/:userId/" component={ProfileContainer}/>
       <ProtectedRoute path="/album/:albumId" component={AlbumShowContainer}/>
       <ProtectedRoute exact path="/explore" component={PhotoIndexContainer}/>
       <ProtectedRoute exact path="/photo/:photoId" component={PhotoShowContainer}/>
       <AuthRoute path="/" component={SplashPage} />
     </Switch>
+
+    <Footer />
 
   </div>
 );

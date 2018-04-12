@@ -153,3 +153,25 @@ nav {
     }
   }
 }
+
+footer {
+  height: 50px;
+  margin-top: 0px;
+  background-color: black;
+  color: white;
+
+  div {
+    width: 15%;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+    a:hover {
+      color: $gray;
+    }
+  }
+
+}
