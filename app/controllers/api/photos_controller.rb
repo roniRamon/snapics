@@ -14,7 +14,14 @@ class Api::PhotosController < ApplicationController
     if @photo.save
       render '/api/photos/show'
     else
-      render json: @photo.errors.full_messages, status: 409
+      errors = @photo.errors.messages.map do |k,v|
+        if k == :img_url
+          v[0]
+        else
+          k.to_s.capitalize + ' ' + v[0]
+        end
+      end
+      render json: errors, status: 409
     end
   end
 

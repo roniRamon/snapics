@@ -32,13 +32,17 @@ class UploadPhoto extends React.Component {
     Modal.setAppElement('body');
   }
 
+  componentDidMount() {
+    this.props.clearPhotoError();
+  }
+
   handleOpenModal () {
     this.setState({ showModal: true });
+    this.props.clearPhotoError();
   }
 
   handleCloseModal () {
     this.setState({ showModal: false });
-    this.props.clearPhotoError();
   }
 
   onImageDrop(file) {

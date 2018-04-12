@@ -60,26 +60,20 @@ class Profile extends React.Component {
         <div className="profile-navbar">
           <ul className="profile-navbar-ul">
             <li className="profile-navbar-li">
-              <span>
-                <Link to={`/profile/${this.props.user.id}/photos`}>
-                  Photos
-                </Link>
-              </span>
+              <Link to={`/profile/${this.props.user.id}/photos`}>
+                Photos
+              </Link>
             </li>
             <li className="profile-navbar-li">
-              <span>
               { this.props.currentUser.id === this.props.user.id ?
                 <UploadPhotoContainer /> :
                 ""
               }
-              </span>
             </li>
             <li className="profile-navbar-li">
-              <span>
-                <Link to={`/profile/${this.props.user.id}/albums`}>
-                  Albums
-                </Link>
-              </span>
+              <Link to={`/profile/${this.props.user.id}/albums`}>
+                Albums
+              </Link>
             </li>
           </ul>
         </div>

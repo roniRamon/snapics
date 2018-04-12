@@ -430,15 +430,15 @@ footer {
     margin: 0 auto; }
     .profile-navbar .profile-navbar-ul .profile-navbar-li {
       padding: 10px; }
-    .profile-navbar .profile-navbar-ul .profile-navbar-li > span {
+    .profile-navbar .profile-navbar-ul .profile-navbar-li {
       transition: transform .3s ease-in-out; }
-    .profile-navbar .profile-navbar-ul .profile-navbar-li > span:after {
+    .profile-navbar .profile-navbar-ul .profile-navbar-li:after {
       display: block;
       content: '';
       border-bottom: solid 2px #326891;
       transform: scaleX(0);
       transition: transform .3s ease-in-out; }
-    .profile-navbar .profile-navbar-ul .profile-navbar-li > span:hover:after {
+    .profile-navbar .profile-navbar-ul .profile-navbar-li:hover:after {
       transform: scaleX(1); }
 
 .profile_index_container {

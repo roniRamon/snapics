@@ -96,11 +96,11 @@
       padding: 10px;
     }
 
-    .profile-navbar-li > span {
+    .profile-navbar-li {
       transition: transform .3s ease-in-out;
     }
 
-    .profile-navbar-li > span:after {
+    .profile-navbar-li:after {
       display: block;
       content: '';
       border-bottom: solid 2px $blue;
@@ -108,7 +108,7 @@
       transition: transform .3s ease-in-out;
     }
 
-    .profile-navbar-li> span:hover:after {
+    .profile-navbar-li:hover:after {
       transform: scaleX(1);
     }
   }

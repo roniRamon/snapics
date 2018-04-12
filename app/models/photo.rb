@@ -1,5 +1,8 @@
 class Photo < ApplicationRecord
-  validates :img_url, :owner_id, :title, presence: true
+  validates :owner_id, :title, presence: true
+  validates :img_url, presence: { message: 'Image Can\'t be Empty'}
+
+
 
   belongs_to :user,
     foreign_key: :owner_id,
