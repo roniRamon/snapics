@@ -236,27 +236,22 @@ nav {
   .photos_index_div .photos_index_container {
     width: 80%;
     margin: 0 auto;
-    line-height: 5;
+    line-height: 4;
     padding-bottom: 40px;
-    -webkit-column-count: 3;
-    -webkit-column-gap: 4px;
-    -moz-column-count: 3;
-    -moz-column-gap: 4px;
     column-count: 3;
     column-gap: 4px; }
     @media screen and (max-width: 900px) {
       .photos_index_div .photos_index_container {
-        -moz-column-count: 2;
-        -webkit-column-count: 2;
         column-count: 2; } }
     @media screen and (max-width: 600px) {
       .photos_index_div .photos_index_container {
-        -moz-column-count: 1;
-        -webkit-column-count: 1;
         column-count: 1; } }
     .photos_index_div .photos_index_container .photos_index .image-item-wrap {
       position: relative;
-      margin: 0px 15px 15px 15px; }
+      margin: 0px 0px 15px 15px; }
+      .photos_index_div .photos_index_container .photos_index .image-item-wrap li {
+        width: 100%;
+        height: 100%; }
       .photos_index_div .photos_index_container .photos_index .image-item-wrap li:before {
         content: "";
         width: 100%;
@@ -264,7 +259,7 @@ nav {
         position: absolute;
         background-color: transparent; }
       .photos_index_div .photos_index_container .photos_index .image-item-wrap li:hover:before {
-        background: linear-gradient(180deg, transparent 80%, black 100%); }
+        background: linear-gradient(180deg, transparent 60%, black 100%); }
       .photos_index_div .photos_index_container .photos_index .image-item-wrap img {
         width: 100%;
         height: auto; }
@@ -284,6 +279,8 @@ nav {
         color: white;
         font-size: 14px;
         font-weight: 200; }
+        .photos_index_div .photos_index_container .photos_index .image-item-wrap .photo-username .photo-username-title {
+          padding-right: 30px; }
     .photos_index_div .photos_index_container .photos_index .image-item-wrap:hover p {
       visibility: visible; }
 
@@ -337,6 +334,13 @@ nav {
         .main-show-page .photo_show_left .photo_show_left-first-div p .description-photo-show {
           font-size: 13px;
           margin-top: 10px; }
+    .main-show-page .photo_show_left .comments-count-per-photo {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #999; }
+      .main-show-page .photo_show_left .comments-count-per-photo span {
+        font-size: 20px;
+        color: black; }
   .main-show-page .photo_show_right {
     flex: 1;
     margin-left: 50px; }
@@ -405,7 +409,7 @@ nav {
 .profile-hero-img {
   background-image: url(http://res.cloudinary.com/dhyya9rw1/image/upload/v1523138103/jeremy-bishop-331838-unsplash.jpg);
   width: 100%;
-  height: 400px;
+  height: 300px;
   background-size: cover;
   position: relative; }
   .profile-hero-img .user-info-profile {

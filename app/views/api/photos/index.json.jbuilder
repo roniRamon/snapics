@@ -8,5 +8,6 @@
     json.username photo.user.username
 
     json.albums photo.albums.pluck(:id)
+    json.comments photo.comments.pluck(:id)
   end
 end

@@ -53,6 +53,18 @@ class PhotoShow extends React.Component {
 
               </p>
             </div>
+            <p className="comments-count-per-photo">
+              <span>
+                {this.props.photo.comments.length}
+              </span>
+              <br />
+              {
+                this.props.photo.comments.length == 1 ?
+                "Comment" :
+                "Comments" 
+              }
+            </p>
+            <hr/>
             <CommentsIndexCotainer photoId={this.props.photo.id} />
           </section>
 
