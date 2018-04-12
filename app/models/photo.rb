@@ -12,4 +12,7 @@ class Photo < ApplicationRecord
   has_many :album_photos, dependent: :destroy
   has_many :albums, through: :album_photos
 
+  has_many :taggings, dependent: :destroy
+  has_many :tags, through: :taggings
+
 end

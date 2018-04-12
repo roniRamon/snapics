@@ -11,8 +11,6 @@ import {
 
 export default () => {
   return (
-
-    <div>
       <footer>
         <div>
           <Link to="/" >
@@ -32,6 +30,5 @@ export default () => {
           </Link>
         </div>
       </footer>
-    </div>
   );
 };
