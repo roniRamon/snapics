@@ -16,7 +16,7 @@ span, article, footer, time, small {
   background: transparent; }
 
 ul {
-  list-style: none; }
+  list-style-type: none; }
 
 img {
   display: block;
@@ -267,7 +267,8 @@ footer {
       margin: 0px 15px 15px 15px; }
       .photos_index_div .photos_index_container .photos_index .image-item-wrap li {
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        position: relative; }
       .photos_index_div .photos_index_container .photos_index .image-item-wrap li:before {
         content: "";
         width: 100%;
@@ -299,67 +300,6 @@ footer {
           padding-right: 30px; }
     .photos_index_div .photos_index_container .photos_index .image-item-wrap:hover p {
       visibility: visible; }
-
-.show-page-div-wrapper-full-page {
-  background-color: #f7f7f5; }
-
-.hero-show-page {
-  height: 500px;
-  width: auto;
-  background-color: #212124;
-  padding-bottom: 60px;
-  padding-top: 100px; }
-  .hero-show-page a {
-    color: white;
-    font-size: 14px;
-    margin-left: 20px; }
-  .hero-show-page img {
-    width: auto;
-    height: 100%;
-    margin: 0 auto; }
-
-.main-show-page {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-between;
-  /*end of photo-show-left */ }
-  .main-show-page .photo_show_left {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    margin-right: 50px; }
-    .main-show-page .photo_show_left .photo_show_left-first-div {
-      display: flex; }
-      .main-show-page .photo_show_left .photo_show_left-first-div .user-icon {
-        border-radius: 50%;
-        width: 60px;
-        height: 60px; }
-      .main-show-page .photo_show_left .photo_show_left-first-div p {
-        display: flex;
-        flex-direction: column;
-        margin-left: 20px; }
-        .main-show-page .photo_show_left .photo_show_left-first-div p .username-photo-show {
-          font-size: 22px;
-          font-weight: 700; }
-        .main-show-page .photo_show_left .photo_show_left-first-div p .title-photo-show {
-          font-size: 16px;
-          margin-top: 10px;
-          font-weight: 700; }
-        .main-show-page .photo_show_left .photo_show_left-first-div p .description-photo-show {
-          font-size: 13px;
-          margin-top: 10px; }
-    .main-show-page .photo_show_left .comments-count-per-photo {
-      margin-top: 20px;
-      font-size: 13px;
-      color: #999; }
-      .main-show-page .photo_show_left .comments-count-per-photo span {
-        font-size: 20px;
-        color: black; }
-  .main-show-page .photo_show_right {
-    flex: 1;
-    margin-left: 50px; }
 
 .fa-cloude {
   cursor: pointer; }
@@ -484,12 +424,22 @@ footer {
   background-color: white;
   width: 100%;
   border-bottom: solid 1px #e2e2e2; }
-  .profile-navbar ul {
+  .profile-navbar .profile-navbar-ul {
     display: flex;
     width: 80%;
     margin: 0 auto; }
-    .profile-navbar ul li {
+    .profile-navbar .profile-navbar-ul .profile-navbar-li {
       padding: 10px; }
+    .profile-navbar .profile-navbar-ul .profile-navbar-li > span {
+      transition: transform .3s ease-in-out; }
+    .profile-navbar .profile-navbar-ul .profile-navbar-li > span:after {
+      display: block;
+      content: '';
+      border-bottom: solid 2px #326891;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out; }
+    .profile-navbar .profile-navbar-ul .profile-navbar-li > span:hover:after {
+      transform: scaleX(1); }
 
 .profile_index_container {
   padding-top: 80px; }
@@ -686,6 +636,72 @@ footer {
     background-color: #383838; }
 
 /*end new-album-form */
+.show-page-div-wrapper-full-page {
+  background-color: #f7f7f5; }
+
+.hero-show-page {
+  height: 500px;
+  width: auto;
+  background-color: #212124;
+  padding-bottom: 60px;
+  padding-top: 100px; }
+  .hero-show-page a {
+    color: white;
+    font-size: 14px;
+    margin-left: 20px; }
+  .hero-show-page img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto; }
+
+.main-show-page {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  /*end of photo-show-left */ }
+  .main-show-page .photo_show_left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 50px; }
+    .main-show-page .photo_show_left .photo_show_left-first-div {
+      display: flex; }
+      .main-show-page .photo_show_left .photo_show_left-first-div .user-icon {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px; }
+      .main-show-page .photo_show_left .photo_show_left-first-div p {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px; }
+        .main-show-page .photo_show_left .photo_show_left-first-div p .username-photo-show:hover a {
+          text-decoration: underline;
+          color: #326891; }
+        .main-show-page .photo_show_left .photo_show_left-first-div p .username-photo-show {
+          font-size: 22px;
+          font-weight: 700;
+          transition: all 7s ease;
+          text-transform: capitalize; }
+        .main-show-page .photo_show_left .photo_show_left-first-div p .title-photo-show {
+          font-size: 16px;
+          margin-top: 10px;
+          font-weight: 700; }
+        .main-show-page .photo_show_left .photo_show_left-first-div p .description-photo-show {
+          font-size: 13px;
+          margin-top: 10px; }
+    .main-show-page .photo_show_left .comments-count-per-photo {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #999; }
+      .main-show-page .photo_show_left .comments-count-per-photo span {
+        font-size: 20px;
+        color: black; }
+  .main-show-page .photo_show_right {
+    flex: 1;
+    margin-left: 50px; }
+
 .photo_show_right {
   position: relative;
   /* ul */ }
@@ -839,6 +855,9 @@ footer {
   transform: rotate(-44deg); }
 .comment-div-container form .comment-form-textarea-container:hover,
 .comment-div-container form .comment-form-textarea-container:hover:before {
+  border: 2px solid #326891; }
+.comment-div-container form .comment-form-textarea-container::selection,
+.comment-div-container form .comment-form-textarea-container::selection:before {
   border: 2px solid #326891; }
 .comment-div-container form .comment-form-textarea-container {
   position: relative;

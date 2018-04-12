@@ -50,6 +50,12 @@
       border: 2px solid $blue;
     }
 
+    .comment-form-textarea-container::selection,
+    .comment-form-textarea-container::selection:before 
+     {
+      border: 2px solid $blue;
+    }
+
     .comment-form-textarea-container {
       position: relative;
       margin-left: 20px;

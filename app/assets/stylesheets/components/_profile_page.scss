@@ -87,13 +87,29 @@
   width: 100%;
   border-bottom: solid 1px #e2e2e2;
 
-  ul {
+  .profile-navbar-ul {
     display: flex;
     width: 80%;
     margin: 0 auto;
 
-    li {
+    .profile-navbar-li {
       padding: 10px;
+    }
+
+    .profile-navbar-li > span {
+      transition: transform .3s ease-in-out;
+    }
+
+    .profile-navbar-li > span:after {
+      display: block;
+      content: '';
+      border-bottom: solid 2px $blue;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+    }
+
+    .profile-navbar-li> span:hover:after {
+      transform: scaleX(1);
     }
   }
 }

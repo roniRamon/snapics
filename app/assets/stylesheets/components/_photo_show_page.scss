@@ -50,9 +50,18 @@
         flex-direction: column;
         margin-left: 20px;
 
+        .username-photo-show:hover {
+          a{
+            text-decoration: underline;
+            color: $blue;
+          }
+        }
+
         .username-photo-show {
           font-size: 22px;
           font-weight: 700;
+          transition: all 7s ease;
+          text-transform: capitalize;
         }
 
         .title-photo-show {
