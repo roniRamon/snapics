@@ -9,7 +9,7 @@ for storing photos - cloudinary.
 
 [SnaPics Wiki page](https://github.com/roniRamon/snapics/wiki)
 
-![screen shot](http://res.cloudinary.com/dhyya9rw1/image/upload/v1523653138/Screen_Shot_2018-04-13_at_13.58.12.png)
+![screen shot](http://res.cloudinary.com/dhyya9rw1/image/upload/v1523653138/Screen_Shot_2018-04-13_at_13.58.12)
 
 ### features
 
@@ -36,7 +36,7 @@ handleSubmit(e) {
 
 ##### Photo
  The photo container holds information about the
- photo - title and description and the owner of the image. i created a component that i can re use in different places in application. I am reusing the code in the home page user profile and displaying the photos in an album.
+ photo - title and description and the owner of the image. The component is reused in different places in application. I am reusing the code in the home page user profile and displaying the photos in an album.
 
 ```javascript
 
