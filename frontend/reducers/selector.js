@@ -36,3 +36,11 @@ export const getPhotoComments = (allComments, photo) => {
   });
   return commentArr;
 };
+
+export const getPhotoTags = (allTags, photo) => {
+  const tagsArr = [];
+  photo.tags.map( tagsId => {
+    tagsArr.push( allTags[tagsId] );
+  });
+  return tagsArr;
+};

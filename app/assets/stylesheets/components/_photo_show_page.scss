@@ -92,5 +92,9 @@
   .photo_show_right {
     flex: 1;
     margin-left: 50px;
+
+    ul {
+      padding: 10px;
+    }
   }
 }

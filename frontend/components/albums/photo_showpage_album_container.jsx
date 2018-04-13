@@ -2,6 +2,20 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchAlbum } from '../../actions/albums_actions';
+import {fetchAllPhotos } from '../../actions/photos_actions';
+
+
+const mapStateToProps = (state, ownProps) => ({
+  album: state.entities.albums[ownProps.albumId],
+  albumId: ownProps.albumId,
+  userId: ownProps.userId,
+  photos: state.entities.photos,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  fetchAlbum: (albumId) => dispatch(fetchAlbum(albumId)),
+  fetchAllPhotos: () => dispatch(fetchAllPhotos()),
+});
 
 class ShowPageAlbum extends React.Component {
 
@@ -10,11 +24,13 @@ class ShowPageAlbum extends React.Component {
     }
 
   componentWillMount(){
-    this.props.fetchAlbum(this.props.albumId);
+    this.props.fetchAlbum(this.props.albumId).then(
+      res => this.props.fetchAllPhotos()
+    );
   }
 
     render(){
-      if(this.props.album == undefined || this.props.albumId == undefined){
+      if (this.props.album == undefined || this.props.albumId == undefined){
         return <section >Loading...</section>;
       }
       return (
@@ -45,16 +61,5 @@ class ShowPageAlbum extends React.Component {
         );
     }
 }
-
-const mapStateToProps = (state, ownProps) => ({
-  album: state.entities.albums[ownProps.albumId],
-  albumId: ownProps.albumId,
-  userId: ownProps.userId,
-  photos: state.entities.photos,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  fetchAlbum: (albumId) => dispatch(fetchAlbum(albumId)),
-});
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShowPageAlbum);

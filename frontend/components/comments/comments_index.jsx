@@ -8,7 +8,11 @@ class CommentsIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchPhoto(this.props.photoId);
+    this.props.fetchPhoto(this.props.photo.id);
+  }
+
+  componentWillMount() {
+    this.props.fetchPhoto(this.props.photo.id);
   }
 
 
@@ -18,18 +22,18 @@ class CommentsIndex extends React.Component {
         <hr />
         <ul>
           {
-            this.props.comments.map( comment => (
+            this.props.comments.map( (comment, i) => (
                 <CommentIndexItem
                   comment={comment}
                   deleteComment={this.props.deleteComment}
                   currentUser={this.props.currentUser}
                   fetchPhoto={this.props.fetchPhoto}
-                  key={`comment-${comment.id}`}
+                  key={`comment-${i}`}
                   />
             ))
           }
           <FormCommentContainer
-            photoId={this.props.photoId}
+            photoId={this.props.photo.id}
             />
         </ul>
       </div>

@@ -1,0 +1,137 @@
+.tags-wrapper {
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  .tag-form-ul1 {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+
+    li {
+
+
+      .tags-header{
+        color: $blue;
+        font-size: 13px;
+        margin-right: 60px;
+      }
+
+      .tag-form:hover {
+        text-decoration: underline;
+      }
+
+      .tag-form {
+        color: $blue;
+        font-size: 13px;
+        cursor: pointer;
+
+        .tag-form-div-container {
+
+          div {
+            form {
+              display: flex;
+              justify-content: space-between;
+              flex-direction: row;
+
+              .tag-form-input-container {
+
+                input[type="text"] {
+                  margin-top: 10px;
+                  border: 0;
+                  border-radius: 3px;
+                  padding: 10px;
+                  background: white;
+                  box-shadow: inset 0 0 0 1px $light-gray;
+                  height: 16px;
+                  margin-bottom: 5px;
+                  color: black;
+                  text-decoration: none;
+
+                }
+
+                input[type="text"]:focus {
+                  box-shadow: 0 0 10px $light-blue;
+                  transition-timing-function: ease-out;
+                  transition: 0.25s;
+                  transform: translateY(0);
+
+                }
+              }
+              input[type="submit"] {
+                color: white;
+                background-color: #326891;
+                text-align: center;
+                font-size: 15px;
+                border-radius: 2px;
+                padding-bottom: 5px;
+                padding-top: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                visibility:hidden
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+ .tag-form-ul2 {
+   display: flex;
+   flex-wrap: wrap;
+
+    .tag-div-container {
+      margin: 10px;
+      position: relative;
+
+      li:hover .delete-tag-button {
+        visibility: visible;
+      }
+
+      li .delete-tag-button{
+        visibility: hidden;
+      }
+
+      li:hover {
+        background-color: $gray;
+        padding-right: 25px;
+        position: relative;
+        color: white;
+      }
+
+      li{
+        transition: all 0.5s ease;
+        background: $gray2;
+        padding-bottom: 3px;
+        padding-top: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+
+        a {
+
+
+        }
+        .delete-tag-button {
+          position: absolute;
+          right: 5px;
+          color: #ccc;
+          font-size: 13px;
+          top: 5px;
+        }
+
+        .delete-tag-button:hover {
+          color: white;
+        }
+      }
+    }
+  } /*end of tag-form-ul2 */
+
+}

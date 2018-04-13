@@ -701,6 +701,8 @@ footer {
   .main-show-page .photo_show_right {
     flex: 1;
     margin-left: 50px; }
+    .main-show-page .photo_show_right ul {
+      padding: 10px; }
 
 .photo_show_right {
   position: relative;
@@ -889,5 +891,91 @@ footer {
 .comment-div-container form input[type="submit"]:hover {
   color: white;
   background-color: #265e8b; }
+
+.tags-wrapper {
+  /*end of tag-form-ul2 */ }
+  .tags-wrapper hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; }
+  .tags-wrapper .tag-form-ul1 {
+    display: flex;
+    justify-content: space-between;
+    width: 300px; }
+    .tags-wrapper .tag-form-ul1 li .tags-header {
+      color: #326891;
+      font-size: 13px;
+      margin-right: 60px; }
+    .tags-wrapper .tag-form-ul1 li .tag-form:hover {
+      text-decoration: underline; }
+    .tags-wrapper .tag-form-ul1 li .tag-form {
+      color: #326891;
+      font-size: 13px;
+      cursor: pointer; }
+      .tags-wrapper .tag-form-ul1 li .tag-form .tag-form-div-container div form {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row; }
+        .tags-wrapper .tag-form-ul1 li .tag-form .tag-form-div-container div form .tag-form-input-container input[type="text"] {
+          margin-top: 10px;
+          border: 0;
+          border-radius: 3px;
+          padding: 10px;
+          background: white;
+          box-shadow: inset 0 0 0 1px #e2e2e2;
+          height: 16px;
+          margin-bottom: 5px;
+          color: black;
+          text-decoration: none; }
+        .tags-wrapper .tag-form-ul1 li .tag-form .tag-form-div-container div form .tag-form-input-container input[type="text"]:focus {
+          box-shadow: 0 0 10px #6288a5;
+          transition-timing-function: ease-out;
+          transition: 0.25s;
+          transform: translateY(0); }
+        .tags-wrapper .tag-form-ul1 li .tag-form .tag-form-div-container div form input[type="submit"] {
+          color: white;
+          background-color: #326891;
+          text-align: center;
+          font-size: 15px;
+          border-radius: 2px;
+          padding-bottom: 5px;
+          padding-top: 5px;
+          padding-left: 10px;
+          padding-right: 10px;
+          visibility: hidden; }
+  .tags-wrapper .tag-form-ul2 {
+    display: flex;
+    flex-wrap: wrap; }
+    .tags-wrapper .tag-form-ul2 .tag-div-container {
+      margin: 10px;
+      position: relative; }
+      .tags-wrapper .tag-form-ul2 .tag-div-container li:hover .delete-tag-button {
+        visibility: visible; }
+      .tags-wrapper .tag-form-ul2 .tag-div-container li .delete-tag-button {
+        visibility: hidden; }
+      .tags-wrapper .tag-form-ul2 .tag-div-container li:hover {
+        background-color: #999;
+        padding-right: 25px;
+        position: relative;
+        color: white; }
+      .tags-wrapper .tag-form-ul2 .tag-div-container li {
+        transition: all 0.5s ease;
+        background: #ccc;
+        padding-bottom: 3px;
+        padding-top: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px; }
+        .tags-wrapper .tag-form-ul2 .tag-div-container li .delete-tag-button {
+          position: absolute;
+          right: 5px;
+          color: #ccc;
+          font-size: 13px;
+          top: 5px; }
+        .tags-wrapper .tag-form-ul2 .tag-div-container li .delete-tag-button:hover {
+          color: white; }
 
 /*# sourceMappingURL=application.css.map */

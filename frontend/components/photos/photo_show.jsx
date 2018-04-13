@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ShowPageAlbumContainer from '../albums/photo_showpage_album_container';
 import UploadImage from '../upload_photo/upload_photo';
 import CommentsIndexCotainer from '../comments/comments_index_container';
-
+import TagIndexContainer from '../tags/tags_index_container';
 
 
 class PhotoShow extends React.Component {
@@ -61,7 +61,7 @@ class PhotoShow extends React.Component {
               {
                 this.props.photo.comments.length == 1 ?
                 "Comment" :
-                "Comments" 
+                "Comments"
               }
             </p>
             <hr/>
@@ -83,6 +83,8 @@ class PhotoShow extends React.Component {
                 )
               }
             </ul>
+
+            <TagIndexContainer photoId={this.props.photo.id}/>
           </section>
         </main>
       </div>

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :photos
     resources :albums
     resources :comments
-    resources :tags, only: [:create, :destroy, :show]
+    resources :tags
 
     post 'albums/:id/photo', to: 'albums#addphoto'
   end

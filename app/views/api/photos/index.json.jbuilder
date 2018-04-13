@@ -9,5 +9,6 @@
 
     json.albums photo.albums.pluck(:id)
     json.comments photo.comments.pluck(:id)
+    json.tags photo.tags.pluck(:id)
   end
 end

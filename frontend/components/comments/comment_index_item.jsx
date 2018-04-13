@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-export class CommentIndexItem extends React.Component {
+class CommentIndexItem extends React.Component {
   constructor(props) {
     super(props);
 
@@ -18,6 +18,9 @@ export class CommentIndexItem extends React.Component {
   }
 
   render(){
+    if(this.props.comment === undefined){
+      return <section >Loading...</section>;
+    }
     const {comment, currentUser } = this.props;
     return (
       <div className="comment-div-container">
