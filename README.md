@@ -1,6 +1,5 @@
-<p align="center">
-  ![screen shot](app/assets/images/Slide1.png)
-</p>
+
+![screen shot](app/assets/images/Slide1.png)
 
 
 [SnaPics ](https://snap-pics.herokuapp.com/), is a flickr inspired photo sharing application that allow the users to upload and share photos, create albums, and view other users profiles and photos.
@@ -19,7 +18,7 @@ for storing photos - cloudinary.
 * Logged in users can upload photos, view list of photos
 * Users can create an album and upload image to the album
 * Comment on other photos
-* Add tags to the photo 
+* Add tags to the photo
 
 ##### Uploading a Photo
 User can upload a photo, the photo visible in his profile page and from the home page.
