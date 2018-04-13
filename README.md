@@ -9,7 +9,7 @@ for storing photos - cloudinary.
 
 [SnaPics Wiki page](https://github.com/roniRamon/snapics/wiki)
 
-![screen shot](http://res.cloudinary.com/dhyya9rw1/image/upload/v1523653138/Screen_Shot_2018-04-13_at_13.58.12.png "Home page")
+![screen shot](http://res.cloudinary.com/dhyya9rw1/image/upload/v1523653138/Screen_Shot_2018-04-13_at_13.58.12.png)
 
 ### features
 
