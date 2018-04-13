@@ -9,7 +9,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const Greeting = (props) => {
-  const demoUser = {username: "roni", email: "roni", password: "123456" };
+  const demoUser = {username: "Anna	Young", email: "Anna_young@gmail.com", password: "password" };
   return  (
     <section className="lange-quote">
       <p>"Photography takes an instant out of time,<br/> altering life by holding it still"</p>
