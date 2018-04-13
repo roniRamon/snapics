@@ -1,24 +1,64 @@
-# README
+# SnaPics
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[SnaPics ](https://snap-pics.herokuapp.com/), is a flickr inspired photo sharing application that allow the users to upload and share photos, create albums, and view other users profiles and photos.
 
-Things you may want to cover:
+### Technologies
 
-* Ruby version
+The application is writing in rails/PostgreSQL as the backend and React and Redux as the frontend.
+for storing photos - cloudinary.
 
-* System dependencies
+[SnaPics Wiki page](https://github.com/roniRamon/snapics/wiki)
 
-* Configuration
+![screen shot](http://res.cloudinary.com/dhyya9rw1/image/upload/v1523653138/Screen_Shot_2018-04-13_at_13.58.12.png "Home page"")
 
-* Database creation
+### features
 
-* Database initialization
+##### Uploading a Photo
+User can upload a photo, the photo visible in his profile page and from the home page.
+when a user click on the upload button a modal with a form will allow the user to enter a title and a description and tp upload the photo.
+User can change his profile image by going to his profile and clicking on the profile image.
+The uploaded image is stored on cloudinary and the url to the image is stored in the application database once the form was submitted.
 
-* How to run the test suite
+```javascript
+handleSubmit(e) {
+  e.preventDefault();
+  let photo = {
+    img_url: this.state.uploadedFileCloudinaryUrl,
+    owner_id: this.state.ownerId,
+    title: this.state.title,
+    description: this.state.description,
+  };
+  this.props.createPhoto(photo).then(
+    () => this.handleCloseModal()
+  );
+}
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+##### Photo
+ The photo container holds information about the
+ photo - title and description and the owner of the image. i created a component that i can re use in different places in application. I am reusing the code in the home page user profile and displaying the photos in an album.
 
-* Deployment instructions
+```javascript
 
-* ...
+export default ({ photo }) => (
+  <div className="image-item-wrap">
+    <Link to={`/photo/${photo.id}`}>
+      <li>
+          <img src={photo.imageUrl} alt={photo.title}/>
+          <p>{photo.title}</p>
+          <p className="photo-username">
+            <span className="photo-username-title">
+              {photo.username}
+            </span>
+            <span>
+              { photo.comments.length == 1 ?
+                photo.comments.length + " Comment" :
+                photo.comments.length + " Comments"
+              }
+            </span>
+          </p>
+      </li>
+    </Link>
+  </div>
+);
+```
