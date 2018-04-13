@@ -23,7 +23,7 @@ class Session extends React.Component {
             </Link>
           </li>
           <li className="upload-icon">
-              <UploadPhotoContainer />
+            <UploadPhotoContainer />
           </li>
           <li className="logout-button">
             <button onClick={logout} >

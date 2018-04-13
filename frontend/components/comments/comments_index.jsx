@@ -42,6 +42,3 @@ class CommentsIndex extends React.Component {
 }
 
 export default CommentsIndex;
-
-// go over ever array of comments
-// dispaly the comments

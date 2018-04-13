@@ -42,7 +42,7 @@ class FormTag extends React.Component {
                 type="text"
                 value={this.state.tagName}
                 onChange={this.handleInput()}
-                placeholder="  Add a Comment"
+                placeholder="  Add a Tag"
                 />
             </div>
             <input type="submit"

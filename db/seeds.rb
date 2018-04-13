@@ -8,11 +8,27 @@
 
 
 
-User.create(username: "roni", email: "roni", password: "123456");
-User.create(username: "Chris", email: "chris@gmail.com", password: "password");
-User.create(username: "Alan", email: "Alan@gmail.com", password: "password");
-User.create(username: "anna", email: "anna@gmail.com", password: "password");
-User.create(username: "cody", email: "cody@gmail.com", password: "password");
+
+
+
+
+
+
+
+
+
+
+
+User.create(username: "Colin Greene", email: "colinGreen@gmail.com", password: "123456");
+User.create(username: "Liam	Simpson", email: "liamsimpson@gmail.com", password: "password");
+User.create(username: "David Scott", email: "davids@gmail.com", password: "password");
+User.create(username: "Anna	Young", email: "Anna_young@gmail.com", password: "password");
+User.create(username: "Kevin Rutherford", email: "rutherford@gmail.com", password: "password");
+User.create(username: "Leah Vance", email: "leahvance@gmail.com", password: "password");
+User.create(username: "Brian Buckland", email: "bbuckland@gmail.com", password: "password");
+User.create(username: "David Scott", email: "Scott@gmail.com", password: "password");
+User.create(username: "Brian Campbell", email: "CampbellB@gmail.com", password: "password");
+User.create(username: "Christopher Mitchell", email: "christopher@gmail.com", password: "password");
 
 
 Photo.create(img_url: "http://res.cloudinary.com/dhyya9rw1/image/upload/v1522877122/dorian-baumann-414610-unsplash.jpg",
