@@ -2,23 +2,27 @@
 ![screen shot](app/assets/images/Slide1.png)
 
 
-[SnaPics ](https://snap-pics.herokuapp.com/), is a flickr inspired photo sharing application that allow the users to upload and share photos, create albums, and view other users profiles and photos.
+[SnaPics ](https://snap-pics.herokuapp.com/), is a Flickr inspired photo sharing application that allow the users to upload and share photos, create albums, and view other users profiles and photos.
 
 ### Technologies
 
-The application is writing in rails/PostgreSQL as the backend and React and Redux as the frontend.
-for storing photos - cloudinary.
+* Ruby on Rails
+* PostgreSQL
+* React  
+* Redux
+* cloudinary
+* Scss
 
 [SnaPics Wiki page](https://github.com/roniRamon/snapics/wiki)
 
 ![screen shot](app/assets/images/screen_show.png)
 
-### features
-* User Authentication
-* Logged in users can upload photos, view list of photos
-* Users can create an album and upload image to the album
-* Comment on other photos
-* Add tags to the photo
+## Features
+* Secure user authentication using BCrypt
+* Logged in users can upload photos and view photos
+* Users can create an album organize photos into the albums
+* User can comment on photos
+* User can add tags to the photo
 
 #### Uploading a Photo
 User can upload a photo, the photo visible in his profile page and from the home page.
@@ -45,10 +49,14 @@ handleSubmit(e) {
 User can create new albums on their own profile.
 When viewing their own album, users can add a photo to the album only if they are the owners of the album. If they are not, the upload button does not appear and they can only view the album.
 
+![comments](app/assets/images/album.gif)
+
 
 #### Comments
 
-When viewing a photo a user can add a comment to the photo and view other users comments. If the user is the owner of the comment he can remove it and a remove button will appear next to the comment. 
+When viewing a photo a user can add a comment to the photo and view other users comments. If the user is the owner of the comment he can remove it and a remove button will appear next to the comment.
+
+![comments](app/assets/images/comments.gif)
 
 
 #### Photo
