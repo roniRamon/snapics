@@ -64,6 +64,7 @@ class UploadPhoto extends React.Component {
         }
 
         if (response.body.secure_url !== "") {
+          console.log(response);
           this.setState({
             uploadedFileCloudinaryUrl: response.body.secure_url
           });
@@ -101,6 +102,11 @@ class UploadPhoto extends React.Component {
         }
       </div>
     );
+  }
+
+  parseurl(url){
+    console.log(url);
+    return url.split("/")[url.split("/").length - 1];
   }
 
   render (){
@@ -150,10 +156,7 @@ class UploadPhoto extends React.Component {
                     src="http://res.cloudinary.com/dhyya9rw1/image/upload/v1522967154/polaroid.png" />
                 </li>
                 <li>
-                  {this.state.uploadedFileCloudinaryUrl === '' ?  null :
-                    <img className="dropzone-mini-pic"
-                      src={this.state.uploadedFileCloudinaryUrl} />
-                  }
+                  
                 </li>
               </ul>
               {this.renderErrors()}
