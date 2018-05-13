@@ -28,7 +28,13 @@ class Profile extends React.Component {
 
   render() {
     if(this.props.user == undefined){
-      return <section >Loading...</section>;
+      return (
+        <div>
+          <div className="loading-image-container" >
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"/>;
+          </div>
+        </div>
+      );
     }
     return (
       <div>

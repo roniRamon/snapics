@@ -168,6 +168,11 @@ footer {
     footer div a:hover {
       color: #999; }
 
+div.loading-image-container {
+  max-width: 441px !important;
+  max-height: 291px !important;
+  margin: 0 auto !important; }
+
 .form-sign-container, .upload-photo-form {
   position: absolute;
   top: 50%;
