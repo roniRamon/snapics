@@ -16,6 +16,7 @@ class UploadPhoto extends React.Component {
     super(props);
     this.state = {
       uploadedFileCloudinaryUrl: '',
+      imageName: '',
       title: '',
       description: '',
       ownerId: this.props.currentUser.id,
@@ -64,9 +65,9 @@ class UploadPhoto extends React.Component {
         }
 
         if (response.body.secure_url !== "") {
-          console.log(response);
           this.setState({
-            uploadedFileCloudinaryUrl: response.body.secure_url
+            uploadedFileCloudinaryUrl: response.body.secure_url,
+            imageName: response.body.public_id + "." + response.body.format,
           });
         }
     });
@@ -102,11 +103,6 @@ class UploadPhoto extends React.Component {
         }
       </div>
     );
-  }
-
-  parseurl(url){
-    console.log(url);
-    return url.split("/")[url.split("/").length - 1];
   }
 
   render (){
@@ -156,7 +152,10 @@ class UploadPhoto extends React.Component {
                     src="http://res.cloudinary.com/dhyya9rw1/image/upload/v1522967154/polaroid.png" />
                 </li>
                 <li>
-                  
+                  <br/>
+                  {this.state.uploadedFileCloudinaryUrl === '' ?  null :
+                    this.state.imageName
+                  }
                 </li>
               </ul>
               {this.renderErrors()}
