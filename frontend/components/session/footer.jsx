@@ -13,17 +13,17 @@ export default () => {
   return (
       <footer>
         <div>
-          <Link to="/" >
+          <Link to="https://www.facebook.com/roni.ramon.75" >
             <FontAwesomeIcon
               icon={faFacebook}
               className="facebook-icon"/>
           </Link>
-          <Link to="/">
+          <Link to="https://www.linkedin.com/in/roni-ramon-69531410a/">
             <FontAwesomeIcon
               icon={faLinkedinIn }
               className="linkedin-icon"/>
           </Link>
-          <Link to="/">
+          <Link to="https://github.com/roniRamon">
             <FontAwesomeIcon
               icon={faGithub }
               className="faGithub-icon"/>
