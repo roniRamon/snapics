@@ -47,6 +47,16 @@ class UploadPhoto extends React.Component {
   }
 
   onImageDrop(file) {
+    //Loading gif add
+    let loadingEl = document.getElementById("drag-drop");
+    loadingEl.innerHTML = "";
+    let imageEl = document.createElement("img");
+    imageEl.src = "https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif";
+    imageEl.setAttribute("id", "loading-image");
+    loadingEl.appendChild(imageEl);
+    let imageDropZoneEl = document.getElementById("image-dropzone-id");
+    imageDropZoneEl.style.display = "none";
+
     this.setState({
       uploadedFile: file[0],
     });
@@ -71,6 +81,14 @@ class UploadPhoto extends React.Component {
           });
         }
     });
+
+    //Loading gif remove
+    let imageEl = document.getElementById("loading-image");
+    let loadingEl = document.getElementById("drag-drop");
+    loadingEl.removeChild(imageEl);
+    loadingEl.innerHTML = "Drop an image or click to select a file to upload.";
+    let imageDropZoneEl = document.getElementById("image-dropzone-id");
+    imageDropZoneEl.style.display = "block";
 
   }
 
@@ -146,9 +164,9 @@ class UploadPhoto extends React.Component {
                     multiple={false}
                     accept="image/*"
                     onDrop={this.onImageDrop.bind(this)}>
-                    <p>Drop an image or click to select a file to upload.</p>
+                    <p id="drag-drop">Drop an image or click to select a file to upload.</p>
                   </Dropzone>
-                  <img className="image-dropzone"
+                  <img className="image-dropzone" id="image-dropzone-id"
                     src="http://res.cloudinary.com/dhyya9rw1/image/upload/v1522967154/polaroid.png" />
                 </li>
                 <li>
