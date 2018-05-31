@@ -85,3 +85,11 @@ export default ({ photo }) => (
   </div>
 );
 ```
+
+### To Add:
+
+  * Delete photo
+  * Delete album
+  * Edit photo - change title
+  * Edit album - change title
+  * Search photos by tag 
