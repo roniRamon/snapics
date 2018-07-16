@@ -6,10 +6,6 @@ export default ({ photo }) => (
   <div className="image-item-wrap">
     <Link to={`/photo/${photo.id}`}>
       <li className="profile-image-item">
-          // if this is your profile then show this =>
-          // style => top: 0px;
-          // margin-left: 250px;-- add icon from font awsome
-          //<p className="delete-photo">X</p>
 
         <img src={photo.imageUrl} alt={photo.title}/>
             <p>{photo.title}</p>

@@ -23,7 +23,7 @@
     "superagent": "^3.8.2",
     "webpack": "^3.4.1"
   },
-  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "description": "snapic a photo sharing application.",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
