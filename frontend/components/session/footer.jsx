@@ -13,21 +13,21 @@ export default () => {
   return (
       <footer>
         <div>
-          <Link to="https://www.facebook.com/roni.ramon.75" >
+          <a href="https://www.facebook.com/roni.ramon.75" >
             <FontAwesomeIcon
               icon={faFacebook}
               className="facebook-icon"/>
-          </Link>
-          <Link to="https://www.linkedin.com/in/roni-ramon-69531410a/">
+          </a>
+          <a href="https://www.linkedin.com/in/roni-ramon-69531410a/">
             <FontAwesomeIcon
               icon={faLinkedinIn }
               className="linkedin-icon"/>
-          </Link>
-          <Link to="https://github.com/roniRamon">
+          </a>
+          <a href="https://github.com/roniRamon">
             <FontAwesomeIcon
               icon={faGithub }
               className="faGithub-icon"/>
-          </Link>
+          </a>
         </div>
       </footer>
   );
