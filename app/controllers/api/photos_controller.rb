@@ -14,7 +14,7 @@ class Api::PhotosController < ApplicationController
     if @photo.save
       render '/api/photos/show'
     else
-      errors = @photo.errors.messages.map do |k,v|
+      errors = @photo.errors.messages.map do |k, v|
         if k == :img_url
           v[0]
         else

@@ -13,3 +13,10 @@ export const deleteTag = (tagId) => (
     method: 'DELETE',
   })
 );
+
+export const fetchAllTags = () => (
+  $.ajax({
+    url: '/api/tags/',
+    method: 'GET',
+  })
+);

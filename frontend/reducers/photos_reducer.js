@@ -8,7 +8,6 @@ import { merge } from 'lodash';
 const photoReducer = ( state = {}, action ) => {
   Object.freeze(state);
   let newState;
-  debugger;
   switch (action.type) {
     case RECEIVE_ALL_PHOTOS:
       return merge({}, state, action.photos);
