@@ -24,3 +24,9 @@ export const deleteTag = tagId => dispatch => (
     resTag => dispatch(removeTag(resTag))
   )
 );
+
+export const fetchAllTags = () => dispatch => (
+  ApiTagsUtil.fetchAllTags().then(
+    res => dispatch(receiveTags(res))
+  )
+);
