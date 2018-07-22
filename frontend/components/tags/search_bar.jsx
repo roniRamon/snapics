@@ -9,7 +9,7 @@ class SearchBar extends React.Component {
   }
 
   componentDidMount() {
-    // fetchAllTags
+    this.props.fetchAllTags();
   }
 
   handleInput() {
