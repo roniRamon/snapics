@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import UploadPhotoContainer from '../upload_photo/upload_photo_container';
-import SearchBar from '../tags/search_bar_container';
+import SearchBarContainer from '../tags/search_bar_container';
 
 class Session extends React.Component {
   constructor(props){
@@ -17,7 +17,7 @@ class Session extends React.Component {
     return (
       currentUser ? (
         <ul>
-          
+
           <li>Hi, {currentUser.username}</li>
           <li className="userimage">
             <Link to={`/profile/${currentUser.id}`} >

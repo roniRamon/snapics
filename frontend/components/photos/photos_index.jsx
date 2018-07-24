@@ -27,16 +27,19 @@ class PhotosIndex extends React.Component {
     );
     return (
       <div className="photos_index_div">
-        <h1>Explore</h1>
-          <form>
-            <input
-              type="text"
-              value={this.state.tagName}
-              onChange={this.handleInput()}
-              placeholder="Search..."
-              className="search-bar-input"
-              />
-          </form>
+        <div className="photos_index_div-header">
+          <h1>Explore</h1>
+            <form className="search-bar-input-form">
+              <input
+                type="text"
+                value={this.state.tagName}
+                onChange={this.handleInput()}
+                placeholder="Search..."
+                className="search-bar-input"
+                />
+            </form>
+        </div>
+
         <section className="photos_index_container">
           <ul className="photos_index">
             {

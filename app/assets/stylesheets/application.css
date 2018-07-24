@@ -306,6 +306,14 @@ div.loading-image-container {
     .photos_index_div .photos_index_container .photos_index .image-item-wrap:hover p {
       visibility: visible; }
 
+.photos_index_div-header {
+  display: flex; }
+  .photos_index_div-header .search-bar-input-form {
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    padding-right: 15%; }
+
 .fa-cloude {
   cursor: pointer; }
 

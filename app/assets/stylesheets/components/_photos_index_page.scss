@@ -90,3 +90,13 @@ $break-large: 900px;
     }
   }
 }
+
+.photos_index_div-header {
+  display: flex;
+  .search-bar-input-form {
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    padding-right: 15%;
+  }
+}
