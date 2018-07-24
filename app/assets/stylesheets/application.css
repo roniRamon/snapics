@@ -313,6 +313,11 @@ div.loading-image-container {
     padding-top: 70px;
     padding-bottom: 10px;
     padding-right: 15%; }
+    .photos_index_div-header .search-bar-input-form .search-icon {
+      font-size: 20px; }
+    .photos_index_div-header .search-bar-input-form .search-bar-input {
+      background: none;
+      border-bottom: black solid 2px; }
 
 .fa-cloude {
   cursor: pointer; }

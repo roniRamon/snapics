@@ -1,5 +1,9 @@
 import React from 'react';
 import PhotoIndexItem from './photos_index_item';
+import fontawesome from '@fortawesome/fontawesome';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/fontawesome-free-solid';
+
 
 class PhotosIndex extends React.Component {
   constructor(props) {
@@ -30,6 +34,7 @@ class PhotosIndex extends React.Component {
         <div className="photos_index_div-header">
           <h1>Explore</h1>
             <form className="search-bar-input-form">
+              <FontAwesomeIcon icon={faSearch} className="search-icon"/>
               <input
                 type="text"
                 value={this.state.tagName}

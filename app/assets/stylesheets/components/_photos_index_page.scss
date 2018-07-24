@@ -98,5 +98,14 @@ $break-large: 900px;
     padding-top: 70px;
     padding-bottom: 10px;
     padding-right: 15%;
+
+    .search-icon {
+      font-size: 20px;
+    }
+
+    .search-bar-input {
+      background: none;
+      border-bottom: black solid 2px;
+    }
   }
 }
