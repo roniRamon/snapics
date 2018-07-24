@@ -17,9 +17,7 @@ class Session extends React.Component {
     return (
       currentUser ? (
         <ul>
-          <li>
-            <SearchBar />
-          </li>
+          
           <li>Hi, {currentUser.username}</li>
           <li className="userimage">
             <Link to={`/profile/${currentUser.id}`} >
